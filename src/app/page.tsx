@@ -1,5 +1,10 @@
-import styles from "./page.module.css";
+import { AppProvider } from "contexts";
+import { Home } from "screens";
 
-export default function Home() {
-  return <main className={styles.main}></main>;
+export default function Page() {
+  return (
+    <AppProvider>
+      <Home />
+    </AppProvider>
+  );
 }

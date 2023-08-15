@@ -1,0 +1,173 @@
+import { ThemeMode } from "constant/enum";
+
+// Create a theme instance.
+const colorSchemes = {
+  [ThemeMode.LIGHT]: {
+    palette: {
+      common: {
+        black: "#000000",
+        white: "#FFFFFF",
+      },
+      primary: {
+        main: "#4281a4",
+        light: "#262E43",
+        dark: "#ED271E",
+        contrastText: "#FFFFFF",
+      },
+      secondary: {
+        main: "#22B1FF",
+        light: "#1D8DCF",
+        dark: "#263B56",
+        contrastText: "#FFFFFF",
+      },
+      error: {
+        main: "#CF0911",
+        light: "#F8483E",
+        dark: "#392323",
+        contrastText: "#FFFFFF",
+      },
+      warning: {
+        main: "#ED6C02",
+        light: "#FFAA00",
+        dark: "#37342D",
+        contrastText: "#FFFFFF",
+      },
+      info: {
+        main: "#0288D1",
+        light: "#03A9F4",
+        dark: "#01579B",
+        contrastText: "#FFFFFF",
+      },
+      success: {
+        main: "#00D181",
+        light: "#15FF9D",
+        dark: "#23404C",
+        contrastText: "#FFFFFF",
+      },
+      grey: {
+        50: "#FAFAFA",
+        100: "#3F3D61",
+        200: "#868AA6",
+        300: "#34344F",
+        400: "#281B28",
+        500: "#262E43",
+        600: "#2A2854",
+        700: "#171431",
+        800: "#131722",
+        900: "#151D2B",
+        A100: "#F5F5F5",
+        A200: "#212B4D",
+        A400: "#282447",
+        A700: "#040215",
+      },
+      text: {
+        primary: "#000000",
+        secondary: "#C2B2B4",
+        disabled: "#50507A",
+      },
+      divider: "rgba(0, 0, 0, .12)",
+      background: {
+        paper: "#111111",
+        default: "#F7FFF7",
+      },
+      action: {
+        active: "rgba(0, 0, 0, .54)",
+        hover: "#868AA6",
+        hoverOpacity: 0.04,
+        selected: "rgba(0, 0, 0, .08)",
+        selectedOpacity: 0.08,
+        disabled: "#797F94",
+        disabledBackground: "rgba(0, 0, 0, .12)",
+        disabledOpacity: 0.12,
+        focus: "rgba(0, 0, 0, .38)",
+        focusOpacity: 0.12,
+        activatedOpacity: 0.12,
+      },
+    },
+  },
+  [ThemeMode.DARK]: {
+    palette: {
+      common: {
+        black: "#000000",
+        white: "#FFFFFF",
+      },
+      primary: {
+        main: "#613DC1",
+        light: "#262E43",
+        dark: "#C589E8",
+        contrastText: "#FFFFFF",
+      },
+      secondary: {
+        main: "#685762",
+        light: "#1D8DCF",
+        dark: "#81717A",
+        contrastText: "#FFFFFF",
+      },
+      error: {
+        main: "#F71735",
+        light: "#FE4A49",
+        dark: "#DB2955",
+        contrastText: "#FFFFFF",
+      },
+      warning: {
+        main: "#FE621D",
+        light: "#FFAA00",
+        dark: "#FFBC3A",
+        contrastText: "#FFFFFF",
+      },
+      info: {
+        main: "#3185FC",
+        light: "#03A9F4",
+        dark: "#48A9A6",
+        contrastText: "#FFFFFF",
+      },
+      success: {
+        main: "#3EC300",
+        light: "#15FF9D",
+        dark: "#00D181",
+        contrastText: "#FFFFFF",
+      },
+      grey: {
+        50: "#C3C0DB",
+        100: "#3F3D61",
+        200: "#868AA6",
+        300: "#34344F",
+        400: "#281B28",
+        500: "#262E43",
+        600: "#2A2854",
+        700: "#171431",
+        800: "#1D2438",
+        900: "#151D2B",
+        A100: "#F5F5F5",
+        A200: "#212B4D",
+        A400: "#282447",
+        A700: "#040215",
+      },
+      text: {
+        primary: "#FFFFFF",
+        secondary: "#868AA6",
+        disabled: "#50507A",
+      },
+      divider: "rgba(0, 0, 0, .12)",
+      background: {
+        paper: "#0C1124",
+        default: "#0D0A0B",
+      },
+      action: {
+        active: "rgba(0, 0, 0, .54)",
+        hover: "#F1E3D3",
+        hoverOpacity: 0.04,
+        selected: "rgba(0, 0, 0, .08)",
+        selectedOpacity: 0.08,
+        disabled: "#797F94",
+        disabledBackground: "#212B4D",
+        disabledOpacity: 0.12,
+        focus: "rgba(0, 0, 0, .38)",
+        focusOpacity: 0.12,
+        activatedOpacity: 0.12,
+      },
+    },
+  },
+};
+
+export default colorSchemes;

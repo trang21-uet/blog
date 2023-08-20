@@ -1,4 +1,7 @@
-import ThemeProvider from "./ThemeProvider";
+"use client";
+
+import { store } from "@/store/configureStore";
+import { Provider } from "react-redux";
 
 type AppProviderProps = {
   children: React.ReactNode;
@@ -7,7 +10,7 @@ type AppProviderProps = {
 const AppProvider = (props: AppProviderProps) => {
   const { children } = props;
 
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return <Provider store={store}>{children}</Provider>;
 };
 
 export default AppProvider;

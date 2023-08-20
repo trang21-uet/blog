@@ -8,7 +8,7 @@ export type IconButtonProps = { icon: React.ReactNode } & MuiIconButtonProps;
 
 const IconButton = (props: IconButtonProps) => {
   const { children, icon, ...rest } = props;
-  return <MuiIconButton {...rest}>{children}</MuiIconButton>;
+  return <MuiIconButton {...rest}>{icon}</MuiIconButton>;
 };
 
 export default memo(IconButton);

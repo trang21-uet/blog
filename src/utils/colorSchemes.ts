@@ -1,4 +1,4 @@
-import { ThemeMode } from "constant/enum";
+import { ThemeMode } from "@/constant/enum";
 
 // Create a theme instance.
 const colorSchemes = {
@@ -9,40 +9,40 @@ const colorSchemes = {
         white: "#FFFFFF",
       },
       primary: {
-        main: "#4281a4",
+        main: "#ACD2ED",
         light: "#262E43",
-        dark: "#ED271E",
-        contrastText: "#FFFFFF",
+        dark: "#CF9FFF",
+        contrastText: "#000000",
       },
       secondary: {
-        main: "#22B1FF",
+        main: "#F7FFF7",
         light: "#1D8DCF",
-        dark: "#263B56",
-        contrastText: "#FFFFFF",
+        dark: "#6DD6DA",
+        contrastText: "#000000",
       },
       error: {
-        main: "#CF0911",
+        main: "#FF5376",
         light: "#F8483E",
-        dark: "#392323",
-        contrastText: "#FFFFFF",
+        dark: "#FF715B",
+        contrastText: "#000000",
       },
       warning: {
-        main: "#ED6C02",
+        main: "#F3B700",
         light: "#FFAA00",
-        dark: "#37342D",
-        contrastText: "#FFFFFF",
+        dark: "#FFAA00",
+        contrastText: "#000000",
       },
       info: {
-        main: "#0288D1",
+        main: "#22B1FF",
         light: "#03A9F4",
-        dark: "#01579B",
+        dark: "#0288D1",
         contrastText: "#FFFFFF",
       },
       success: {
         main: "#00D181",
         light: "#15FF9D",
-        dark: "#23404C",
-        contrastText: "#FFFFFF",
+        dark: "#18F2B2",
+        contrastText: "#000000",
       },
       grey: {
         50: "#FAFAFA",
@@ -63,7 +63,7 @@ const colorSchemes = {
       text: {
         primary: "#000000",
         secondary: "#C2B2B4",
-        disabled: "#50507A",
+        disabled: "#969696",
       },
       divider: "rgba(0, 0, 0, .12)",
       background: {
@@ -98,9 +98,9 @@ const colorSchemes = {
         contrastText: "#FFFFFF",
       },
       secondary: {
-        main: "#685762",
+        main: "#0D0A0B",
         light: "#1D8DCF",
-        dark: "#81717A",
+        dark: "#613DC1",
         contrastText: "#FFFFFF",
       },
       error: {
@@ -146,7 +146,7 @@ const colorSchemes = {
       text: {
         primary: "#FFFFFF",
         secondary: "#868AA6",
-        disabled: "#50507A",
+        disabled: "#969696",
       },
       divider: "rgba(0, 0, 0, .12)",
       background: {

@@ -5,36 +5,45 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import {
   IconButton,
   InputAdornment,
+  StackProps,
   TextField,
   TextFieldProps,
 } from "@mui/material";
-import { ChangeEvent, FormEvent, memo, useState } from "react";
+import { memo, useState } from "react";
 
 type InputProps = {
+  name: string;
+  value?: string | undefined;
   error?: string;
-  onChange?: () => void;
-} & Omit<TextFieldProps, "error" | "onChange">;
+  required?: boolean;
+  containerProps?: StackProps;
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement | HTMLInputElement>;
+  onChangeText?: (name: string, text?: string) => void;
+} & Omit<TextFieldProps, "error" | "onChangeText">;
 
 const Input = (props: InputProps) => {
   const {
     label = "Input",
     name,
-    value,
+    value: valueProps,
     error,
     onChange: onChangeProps,
+    onChangeText,
     onSubmit,
     type = "text",
     ...rest
   } = props;
 
   const [show, setShow] = useState(false);
+  const [value, setValue] = useState(valueProps);
 
-  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
-    event.preventDefault();
-    onChangeProps && onChangeProps();
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    event.stopPropagation();
+    let newValue = event.target.value;
+    onChangeText && onChangeText(newValue);
+    setValue(newValue);
+    onChangeProps && onChangeProps(event);
   };
-
-  console.log(show);
 
   return (
     <TextField
@@ -44,8 +53,8 @@ const Input = (props: InputProps) => {
       value={value}
       helperText={error}
       error={!!error}
-      type={type === "password" && show ? "text" : type}
       onChange={onChange}
+      type={type === "password" && show ? "text" : type}
       onSubmit={onSubmit ? onSubmit : () => {}}
       InputLabelProps={{
         sx: {
@@ -61,6 +70,7 @@ const Input = (props: InputProps) => {
                 onClick={() => setShow((show) => !show)}
                 edge="end"
                 size="small"
+                color="info"
               >
                 {show ? (
                   <VisibilityOff fontSize="inherit" />
@@ -69,9 +79,7 @@ const Input = (props: InputProps) => {
                 )}
               </IconButton>
             </InputAdornment>
-          ) : (
-            <></>
-          ),
+          ) : null,
         sx: error ? { borderColor: "error.main" } : undefined,
       }}
       {...rest}

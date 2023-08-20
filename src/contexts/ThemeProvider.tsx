@@ -5,11 +5,10 @@ import {
   experimental_extendTheme as extendTheme,
   getInitColorSchemeScript,
 } from "@mui/material/styles";
-import colorSchemes from "utils/colorSchemes";
+import colorSchemes from "@/utils/colorSchemes";
 import CssBaseline from "@mui/material/CssBaseline";
-import { DEFAULT_THEME_MODE } from "constant";
-import { Montserrat } from "next/font/google";
-import { TypographyOptions } from "@mui/material/styles/createTypography";
+import { DEFAULT_THEME_MODE } from "@/constant";
+import { Montserrat, Lexend_Deca } from "next/font/google";
 
 const montserrat = Montserrat({
   weight: ["200", "300", "400", "500", "600", "700"],
@@ -18,13 +17,32 @@ const montserrat = Montserrat({
   fallback: ["Segoe UI", "sans-serif"],
 });
 
+const lexend = Lexend_Deca({
+  weight: ["500", "700"],
+  subsets: ["vietnamese"],
+  fallback: ["Open Sans", "san-serif"],
+});
+
 const typography = {
   fontFamily: montserrat.style.fontFamily,
   lineHeight: 1.6,
   fontFeatureSettings: "'tnum' on, 'lnum' on",
+  h1: {
+    fontFamily: lexend.style.fontFamily,
+  },
+  h2: {
+    fontFamily: lexend.style.fontFamily,
+  },
+  h3: {
+    fontFamily: lexend.style.fontFamily,
+  },
+  h4: {
+    fontFamily: lexend.style.fontFamily,
+  },
   h5: {
     fontSize: 28,
     fontWeight: 700,
+    fontFamily: lexend.style.fontFamily,
   },
   h6: {
     fontSize: 24,
@@ -38,6 +56,7 @@ const typography = {
   },
   subtitle1: {
     fontSize: 20,
+    fontFamily: lexend.style.fontFamily,
   },
   subtitle2: {
     fontSize: 17,

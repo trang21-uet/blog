@@ -17,7 +17,7 @@ const colorSchemes = {
       secondary: {
         main: "#F7FFF7",
         light: "#1D8DCF",
-        dark: "#6DD6DA",
+        dark: "#B19CD9",
         contrastText: "#000000",
       },
       error: {
@@ -67,12 +67,12 @@ const colorSchemes = {
       },
       divider: "rgba(0, 0, 0, .12)",
       background: {
-        paper: "#111111",
+        paper: "#F7FFF7",
         default: "#F7FFF7",
       },
       action: {
         active: "rgba(0, 0, 0, .54)",
-        hover: "#868AA6",
+        hover: "#F0F0F0",
         hoverOpacity: 0.04,
         selected: "rgba(0, 0, 0, .08)",
         selectedOpacity: 0.08,
@@ -155,7 +155,7 @@ const colorSchemes = {
       },
       action: {
         active: "rgba(0, 0, 0, .54)",
-        hover: "#F1E3D3",
+        hover: "#969696",
         hoverOpacity: 0.04,
         selected: "rgba(0, 0, 0, .08)",
         selectedOpacity: 0.08,

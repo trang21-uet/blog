@@ -25,7 +25,7 @@ const lexend = Lexend_Deca({
 
 const typography = {
   fontFamily: montserrat.style.fontFamily,
-  lineHeight: 1.6,
+  lineHeight: 1.4,
   fontFeatureSettings: "'tnum' on, 'lnum' on",
   h1: {
     fontFamily: lexend.style.fontFamily,
@@ -41,7 +41,7 @@ const typography = {
   },
   h5: {
     fontSize: 28,
-    fontWeight: 700,
+    fontWeight: 600,
     fontFamily: lexend.style.fontFamily,
   },
   h6: {

@@ -1,35 +1,57 @@
-import { Stack } from "@mui/material";
-import { Button, Text } from "@/components";
-import { Input } from "@/components/Form";
-import Link from "@/components/Link";
-import { BLOG_PATH } from "@/constant/path";
+"use client";
+import { useBlogs } from "@/store/blog";
+import { Box, Container, Stack, useTheme } from "@mui/material";
+import BlogCard from "./BlogCard";
+import { useEffect } from "react";
+import { Text } from "@/components";
 
 const Page = () => {
+  const { items, onGetBlogs } = useBlogs();
+  const theme = useTheme();
+
+  useEffect(() => {
+    onGetBlogs();
+  }, [onGetBlogs]);
+
   return (
-    <Stack p={3} alignItems="start" spacing={3}>
-      <Text variant="h3">Title</Text>
-      <Text>Text</Text>
-      <Stack direction="row" spacing={3}>
-        <Button color="primary">Primary</Button>
-        <Button color="secondary">Secondary</Button>
-        <Button color="info">Info</Button>
-        <Button color="warning">Warning</Button>
-        <Button color="error">Error</Button>
-        <Button color="success">Success</Button>
-      </Stack>
-      <Stack direction="row" spacing={3}>
-        <Input name="email" label="Input" />
-        <Input
-          name="email"
-          type="password"
-          label="Password"
-          error="Error message"
-        />
-      </Stack>
-      <Link color="primary" href={BLOG_PATH}>
-        Blog
-      </Link>
-    </Stack>
+    <Container
+      sx={{
+        flex: 1,
+        overflow: "auto",
+        maxWidth: {
+          xs: "100%",
+          md: theme.breakpoints.values.md,
+          lg: theme.breakpoints.values.md,
+          xl: theme.breakpoints.values.lg,
+        },
+      }}
+    >
+      <Text variant="h4" sx={{ mb: 2 }}>
+        Blog phổ biến
+      </Text>
+      <Box
+        display={{ xs: "flex", sm: "grid" }}
+        flexDirection="column"
+        gridTemplateColumns={{
+          sm: "repeat(2, 1fr)",
+          // md: "repeat(3, 1fr)",
+          // lg: "repeat(2, 1fr)",
+          xl: "repeat(3, 1fr)",
+        }}
+        gridTemplateRows="max-content"
+        gap={3}
+        p={1}
+      >
+        {items.map((item) => (
+          <BlogCard
+            key={item.id}
+            id={item.id}
+            description={item.description}
+            title={item.title}
+          />
+        ))}
+      </Box>
+    </Container>
   );
 };
 

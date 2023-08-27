@@ -9,7 +9,6 @@ export const getBlogs = createAsyncThunk("blog/getBlogs", async (queries) => {
   try {
     // TODO
     return BLOGS;
-    return BLOGS;
   } catch (error) {
     throw error;
   }

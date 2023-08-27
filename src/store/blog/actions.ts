@@ -4,11 +4,6 @@ import BLOGS from "./data";
 export interface BlogQueries {
   id: string;
 }
-import BLOGS from "./data";
-
-export interface BlogQueries {
-  id: string;
-}
 
 export const getBlogs = createAsyncThunk("blog/getBlogs", async (queries) => {
   try {

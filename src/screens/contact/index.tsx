@@ -1,4 +1,5 @@
-"use client";
+// "use client";
+import Link from "next/link";
 
 const Contact = () => {
 
@@ -6,17 +7,17 @@ const Contact = () => {
     <div>
       <ul className="social-links">
         <li className="facebook">
-          <a href="https://www.facebook.com/hngngn.10">Facebook</a>
+          <Link href="https://www.facebook.com/hngngn.10">Facebook</Link>
         </li>
         <li className="twitter">
-          <a href="https://twitter.com/marcus_killian1">Twitter</a>
+          <Link href="https://twitter.com/marcus_killian1">Twitter</Link>
         </li>
         <li className="youtube">
-          <a href="https://www.youtube.com/@hgtn3581">YouTube</a>
+          <Link href="https://www.youtube.com/@hgtn3581">YouTube</Link>
         </li>
         <li className="gmail">
-          {/* mailto: <a href="https://accounts.google.com/ServiceLogin?hl=vi">ng.hoangtu.main@gmail.com</a> */}
-          mailto: <a href="https://mail.google.com/mail/#inbox?compose=new&view=cm&fs=1&to=ng.hoangtu.main@gmail.com">ng.hoangtu.main@gmail.com</a>
+          {/* mailto: <Link href={"https://accounts.google.com/Service}Login?hl=vi">ng.hoangtu.main@gmail.com</Link> */}
+          mailto: <Link href="https://mail.google.com/mail/#inbox?compose=new&view=cm&fs=1&to=ng.hoangtu.main@gmail.com">ng.hoangtu.main@gmail.com</Link>
         </li>
       </ul>
     </div>

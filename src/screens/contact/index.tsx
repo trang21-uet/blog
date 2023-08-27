@@ -2,7 +2,6 @@
 import Link from "next/link";
 
 const Contact = () => {
-
   return (
     <div>
       <ul className="social-links">
@@ -17,7 +16,10 @@ const Contact = () => {
         </li>
         <li className="gmail">
           {/* mailto: <Link href={"https://accounts.google.com/Service}Login?hl=vi">ng.hoangtu.main@gmail.com</Link> */}
-          mailto: <Link href="https://mail.google.com/mail/#inbox?compose=new&view=cm&fs=1&to=ng.hoangtu.main@gmail.com">ng.hoangtu.main@gmail.com</Link>
+          mailto:{" "}
+          <Link href="https://mail.google.com/mail/#inbox?compose=new&view=cm&fs=1&to=ng.hoangtu.main@gmail.com">
+            ng.hoangtu.main@gmail.com
+          </Link>
         </li>
       </ul>
     </div>

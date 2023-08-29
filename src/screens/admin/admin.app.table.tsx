@@ -1,5 +1,5 @@
 'use client';
-
+//Style bi loi
 import { Table, Button } from 'react-bootstrap';
 // import Button from 'react-bootstrap/Button';
 import CreateModal from '@/screens/admin/admin.create.modal';
@@ -35,7 +35,7 @@ const AdminAppTable = (props: IProps) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {blogs.map(blog => {
+                    {blogs?.map(blog => {
                         return (
                                 <tr key={blog.id}>
                                     <td>{blog.id}</td>

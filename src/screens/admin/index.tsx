@@ -6,7 +6,7 @@ import useSWR from "swr";
 
 const Admin = () => {
   
-  // const res = fetch("http://localhost:8000/blogs");
+  // const res = fetch(url);
   // console.log(">>> check res", res);
   // .then((response: { json: () => any; }) => response.json())
   // .then((data: any) => {
@@ -28,9 +28,9 @@ const Admin = () => {
 
   // console.log(">>> Check Data ... ", data);
 
-  if (!data) {
-    return <div>loading...</div>
-  };
+  // if (!data) {
+  //   return <div>loading...</div>
+  // };
 
   return (
     <div>

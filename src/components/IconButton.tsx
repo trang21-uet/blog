@@ -4,11 +4,11 @@ import {
 } from "@mui/material";
 import { memo } from "react";
 
-export type IconButtonProps = { icon: React.ReactNode } & MuiIconButtonProps;
+export type IconButtonProps = {} & MuiIconButtonProps;
 
 const IconButton = (props: IconButtonProps) => {
-  const { children, icon, ...rest } = props;
-  return <MuiIconButton {...rest}>{icon}</MuiIconButton>;
+  const { ...rest } = props;
+  return <MuiIconButton {...rest} />;
 };
 
 export default memo(IconButton);

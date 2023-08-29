@@ -5,17 +5,16 @@ import Button, { ButtonProps } from "./Button";
 
 export type LinkProps = {
   href: string;
-  color?: ButtonProps["color"];
-} & Omit<ButtonProps, "color">;
+} & ButtonProps;
 
 const Link = (props: LinkProps) => {
-  const { href, color = "secondary", ...rest } = props;
+  const { href, ...rest } = props;
   return (
     <Button
       component={MuiLink}
       LinkComponent={NextLink}
       href={href}
-      color={color}
+      color="secondary"
       {...rest}
     />
   );

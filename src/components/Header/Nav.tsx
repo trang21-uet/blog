@@ -8,41 +8,41 @@ import { CONTACT_PATH, HOME_PATH, INTRODUCE_PATH } from "@/constant/path";
 
 type NavProps = {
   collapse?: boolean;
+  active: string;
 };
 
 const Nav = (props: NavProps) => {
-  const { collapse = false } = props;
+  const { active, collapse = false } = props;
   return collapse ? (
-    <IconButton color="secondary" icon={<MenuIcon fontSize="large" />} />
+    <IconButton color="secondary">
+      <MenuIcon fontSize="large" />
+    </IconButton>
   ) : (
-    <Stack direction="row">
-      {NAV_ITEMS.map((item) =>
-        item.children ? (
-          <Link
-            key={item.label}
-            href={item.href}
-            sx={{
-              textTransform: "uppercase",
-              fontWeight: "600",
-              boxShadow: "none",
-            }}
-          >
-            {item.label}
-          </Link>
-        ) : (
-          <Link
-            key={item.label}
-            href={item.href}
-            sx={{
-              textTransform: "uppercase",
-              fontWeight: "600",
-              boxShadow: "none",
-            }}
-          >
-            {item.label}
-          </Link>
-        ),
-      )}
+    <Stack component="nav" direction="row" alignItems="center">
+      {NAV_ITEMS.map((item) => (
+        <Link
+          key={item.label}
+          href={item.href}
+          variant="text"
+          disabled={active === item.href}
+          sx={{
+            textTransform: "uppercase",
+            fontWeight: "600",
+            boxShadow: "none",
+            bgColor: "transparent",
+            color: "text.primary",
+            ":hover": {
+              color: "secondary.dark",
+            },
+            "&.Mui-disabled": {
+              bgColor: "transparent",
+              color: "secondary.dark",
+            },
+          }}
+        >
+          {item.label}
+        </Link>
+      ))}
     </Stack>
   );
 };

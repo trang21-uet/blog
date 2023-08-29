@@ -1,32 +1,25 @@
 "use client";
-import { useBlogs } from "@/store/blog";
-import { Box, Container, Stack, useTheme } from "@mui/material";
-import BlogCard from "./BlogCard";
-import { useEffect } from "react";
 import { Text } from "@/components";
+import { useBlogs } from "@/store/blog";
+import { Box, Stack } from "@mui/material";
+import { useEffect } from "react";
+import BlogCard from "./BlogCard";
 
 const Page = () => {
   const { items, onGetBlogs } = useBlogs();
-  const theme = useTheme();
 
   useEffect(() => {
     onGetBlogs();
   }, [onGetBlogs]);
 
   return (
-    <Container
-      sx={{
-        flex: 1,
-        overflow: "auto",
-        maxWidth: {
-          xs: "100%",
-          md: theme.breakpoints.values.md,
-          lg: theme.breakpoints.values.md,
-          xl: theme.breakpoints.values.lg,
-        },
-      }}
-    >
-      <Text variant="h4" sx={{ mb: 2 }}>
+    <Stack component="main" py={3}>
+      <Text
+        variant="h4"
+        sx={{
+          mb: 2,
+        }}
+      >
         Blog phổ biến
       </Text>
       <Box
@@ -34,8 +27,6 @@ const Page = () => {
         flexDirection="column"
         gridTemplateColumns={{
           sm: "repeat(2, 1fr)",
-          // md: "repeat(3, 1fr)",
-          // lg: "repeat(2, 1fr)",
           xl: "repeat(3, 1fr)",
         }}
         gridTemplateRows="max-content"
@@ -51,7 +42,7 @@ const Page = () => {
           />
         ))}
       </Box>
-    </Container>
+    </Stack>
   );
 };
 

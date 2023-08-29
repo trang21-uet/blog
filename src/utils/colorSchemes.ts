@@ -17,7 +17,7 @@ const colorSchemes = {
       secondary: {
         main: "#F7FFF7",
         light: "#1D8DCF",
-        dark: "#B19CD9",
+        dark: "#613DC1",
         contrastText: "#000000",
       },
       error: {

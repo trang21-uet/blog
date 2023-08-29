@@ -15,7 +15,7 @@ const BlogCard = (props: BlogCardProps) => {
   return (
     <Paper
       component={Link}
-      color="secondary"
+      color="primary"
       href={`${BLOG_PATH}/${id}`}
       elevation={5}
       sx={{
@@ -24,8 +24,10 @@ const BlogCard = (props: BlogCardProps) => {
         p: 0,
         borderRadius: 2,
         overflow: "hidden",
+        transition: "all 0.3s",
         ":hover": {
           transform: "scale(1.03)",
+          bgcolor: "primary.main",
         },
       }}
     >

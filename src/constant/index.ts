@@ -9,3 +9,5 @@ export const LONG_TIME_FORMAT = "HH:mm:ss";
 export const SHORT_TIME_FORMAT = "HH:mm";
 export const DATE_TIME_FORMAT_SLASH = `${DATE_FORMAT_SLASH} ${SHORT_TIME_FORMAT}`;
 export const DATE_TIME_FORMAT_HYPHEN = `${DATE_FORMAT_HYPHEN} ${SHORT_TIME_FORMAT}`;
+
+export const HEADER_HEIGHT = 70;

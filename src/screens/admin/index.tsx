@@ -1,10 +1,42 @@
-// "use client";
+"use client";
+
+import AdminAppTable from "./admin.app.table";
+// import useSWRImmutable from 'swr/immutable';
+import useSWR from "swr";
 
 const Admin = () => {
+  
+  // const res = fetch("http://localhost:8000/blogs");
+  // console.log(">>> check res", res);
+  // .then((response: { json: () => any; }) => response.json())
+  // .then((data: any) => {
+    // console.log(">>> respone:",res, " Data...", data);
+  // })
+  // .catch((error: any) => {
+    // console.error(error);
+  // });
+
+  const fetcher = (url : string) => fetch(url).then((res) => res.json());
+
+  const { data, error, isLoading } = useSWR("http://localhost:8000/blogs",
+    fetcher, {
+      revalidateIfStale: false,
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false
+    }
+  );
+
+  // console.log(">>> Check Data ... ", data);
+
+  if (!data) {
+    return <div>loading...</div>
+  };
 
   return (
     <div>
-        Routing to Admin Page successfully!!!
+        {/* <span>{data?.length}</span> */}
+        {/* Routing to Admin Page successfully!!! */}
+        <AdminAppTable blogs={data}/>
     </div>
   );
 };

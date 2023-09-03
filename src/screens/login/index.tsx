@@ -5,13 +5,9 @@ import { Input } from "@/components/Form";
 import Link from "@/components/Link";
 import { HEADER_HEIGHT } from "@/constant";
 import { REGISTER_PATH } from "@/constant/path";
+import { LoginInfo, useAuth } from "@/store/auth";
 import { Paper, Stack } from "@mui/material";
-import { useState, FormEvent } from "react";
-
-interface UserLoginInfo {
-  email: string;
-  password: string;
-}
+import { FormEvent, useState } from "react";
 
 interface UserLoginError {
   email: string;
@@ -19,7 +15,7 @@ interface UserLoginError {
 }
 
 const Login = () => {
-  const [info, setInfo] = useState<UserLoginInfo>({
+  const [info, setInfo] = useState<LoginInfo>({
     email: "",
     password: "",
   });
@@ -28,9 +24,15 @@ const Login = () => {
     password: "",
   });
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const { onLogin } = useAuth();
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(info);
+    try {
+      await onLogin(info);
+    } catch (error) {
+      throw error;
+    }
   };
 
   return (
@@ -38,8 +40,9 @@ const Login = () => {
       flex={1}
       height={`calc(100vh - ${HEADER_HEIGHT}px)`}
       alignItems="center"
-      justifyContent="center"
+      position="relative"
     >
+      <Logo />
       <Paper
         component="form"
         onSubmit={handleSubmit}
@@ -47,14 +50,15 @@ const Login = () => {
           width: "600px",
           borderRadius: 4,
           p: 5,
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
         }}
         elevation={5}
       >
         <Stack spacing={3}>
-          {/* <Text variant="h6" sx={{ textAlign: "center", mb: 2 }}>
-            Đăng nhập
-          </Text> */}
-          <Logo disabled />
+          <Text variant="h6">Đăng nhập</Text>
           <Input
             name="email"
             label="Email"

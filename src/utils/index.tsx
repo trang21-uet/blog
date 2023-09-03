@@ -1,4 +1,4 @@
-import { DATE_FORMAT_SLASH } from "@/constant";
+import { DATE_FORMAT_SLASH, TOKEN_KEY } from "@/constant";
 import { format, parseISO } from "date-fns";
 
 export const formatDate = (
@@ -14,4 +14,9 @@ export const formatDate = (
   } catch (error) {
     return "--";
   }
+};
+
+export const getAccessToken = () => {
+  if (typeof window === "undefined") return;
+  return localStorage.getItem(TOKEN_KEY);
 };

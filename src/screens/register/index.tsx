@@ -5,14 +5,9 @@ import { Input } from "@/components/Form";
 import Link from "@/components/Link";
 import { HEADER_HEIGHT } from "@/constant";
 import { LOGIN_PATH } from "@/constant/path";
+import { RegisterInfo, useAuth } from "@/store/auth";
 import { Paper, Stack } from "@mui/material";
 import { useState, FormEvent } from "react";
-
-interface UserInfo {
-  email: string;
-  password: string;
-  confirm: string;
-}
 
 interface UserError {
   email: string;
@@ -21,7 +16,7 @@ interface UserError {
 }
 
 const Register = () => {
-  const [info, setInfo] = useState<UserInfo>({
+  const [info, setInfo] = useState<RegisterInfo>({
     email: "",
     password: "",
     confirm: "",
@@ -31,10 +26,15 @@ const Register = () => {
     password: "",
     confirm: "",
   });
+  const { onRegister } = useAuth();
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    console.log(info);
+    try {
+      await onRegister(info);
+    } catch (error) {
+      throw error;
+    }
   };
 
   return (
@@ -42,8 +42,9 @@ const Register = () => {
       flex={1}
       height={`calc(100vh - ${HEADER_HEIGHT}px)`}
       alignItems="center"
-      justifyContent="center"
+      position="relative"
     >
+      <Logo />
       <Paper
         component="form"
         onSubmit={handleSubmit}
@@ -51,11 +52,15 @@ const Register = () => {
           width: "600px",
           borderRadius: 4,
           p: 5,
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
         }}
         elevation={5}
       >
         <Stack spacing={3}>
-          <Logo disabled />
+          <Text variant="h6">Tạo tài khoản mới</Text>
           <Input
             name="email"
             label="Email"

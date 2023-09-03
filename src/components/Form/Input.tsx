@@ -58,7 +58,7 @@ const Input = (props: InputProps) => {
       onSubmit={onSubmit ? onSubmit : () => {}}
       InputLabelProps={{
         sx: {
-          fontWeight: "700",
+          fontWeight: "500",
         },
       }}
       InputProps={{

@@ -20,8 +20,6 @@ const Blog = () => {
   const params = useParams();
   const { isSm, isMd, isXl } = useBreakpoints();
 
-  console.log({ isXl });
-
   const imageHeight = useMemo(() => {
     switch (true) {
       case isMd:
@@ -31,7 +29,7 @@ const Blog = () => {
       default:
         return 600;
     }
-  }, [isXl]);
+  }, [isMd, isXl]);
 
   useEffect(() => {
     if (!params || item) {

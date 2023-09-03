@@ -1,3 +1,6 @@
 import Home from "./home";
+import Blog from "./blog";
+import Login from "./login";
+import Register from "./register";
 
-export { Home };
+export { Home, Blog, Login, Register };

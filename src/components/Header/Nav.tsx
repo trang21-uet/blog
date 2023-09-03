@@ -5,6 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Link from "../Link";
 import { NavItem } from "@/constant/type";
 import { CONTACT_PATH, HOME_PATH, INTRODUCE_PATH } from "@/constant/path";
+import AccountMenu from "./AccountMenu";
 
 type NavProps = {
   collapse?: boolean;
@@ -43,6 +44,7 @@ const Nav = (props: NavProps) => {
           {item.label}
         </Link>
       ))}
+      <AccountMenu />
     </Stack>
   );
 };

@@ -24,6 +24,7 @@ export default function RootLayout({
           <ThemeProvider>
             <Header />
             <Container
+              component="main"
               sx={{
                 mt: `${HEADER_HEIGHT}px`,
                 maxWidth: {

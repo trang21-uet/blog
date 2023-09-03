@@ -7,6 +7,9 @@ import { useBreakpoints } from "@/hooks";
 import { Logo } from "@/components";
 import { usePathname } from "next/navigation";
 import { HEADER_HEIGHT } from "@/constant";
+import { LOGIN_PATH, REGISTER_PATH } from "@/constant/path";
+
+const AUTH_PATHS = [LOGIN_PATH, REGISTER_PATH];
 
 const Header = () => {
   const { isMd } = useBreakpoints();
@@ -16,7 +19,7 @@ const Header = () => {
     <Paper
       component="header"
       sx={{
-        display: "flex",
+        display: AUTH_PATHS.includes(pathname) ? "none" : "flex",
         justifyContent: "space-between",
         alignItems: "center",
         maxWidth: "100vw",

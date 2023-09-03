@@ -6,10 +6,15 @@ import Link from "./Link";
 import { HOME_PATH } from "@/constant/path";
 import { usePathname } from "next/navigation";
 
-const Logo = () => {
+type Props = {
+  disabled?: boolean;
+};
+
+const Logo = (props: Props) => {
+  const { disabled = false } = props;
   const pathname = usePathname();
 
-  return pathname === HOME_PATH ? (
+  return pathname === HOME_PATH || disabled ? (
     <Text noSelect variant="h4" sx={{ cursor: "initial" }}>
       Dev Blogs
     </Text>

@@ -1,4 +1,8 @@
-// "use client";
+"use client";
+
+import AdminAppTable from "./admin.app.table";
+// import useSWRImmutable from 'swr/immutable';
+import useSWR from "swr";
 
 const Admin = () => {
   return <div>Routing to Admin Page successfully!!!</div>;

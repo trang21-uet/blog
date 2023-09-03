@@ -1,5 +1,6 @@
 // "use client";
 import Link from "next/link";
+import "./ContactStyling.css";
 
 const Contact = () => {
   return (

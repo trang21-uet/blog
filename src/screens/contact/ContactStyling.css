@@ -1,35 +1,35 @@
 .social-links {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .social-links li {
-    display: inline-block;
-    margin-right: 10px;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .social-links li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
 }
 
 .social-links li a:hover {
-    color: #000;
+  color: #000;
 }
 
 .social-links li.facebook a {
-    color: #3b5998;
+  color: #3b5998;
 }
 
 .social-links li.twitter a {
-    color: #1da1f2;
+  color: #1da1f2;
 }
 
 .social-links li.youtube a {
-    color: #ff0000;
+  color: #ff0000;
 }
 
 .social-links li.gmail a {
-    color: #202124;
+  color: #202124;
 }

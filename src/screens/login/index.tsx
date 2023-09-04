@@ -1,5 +1,3 @@
-"use client";
-
 import { Button, Logo, Text } from "@/components";
 import { Input } from "@/components/Form";
 import Link from "@/components/Link";

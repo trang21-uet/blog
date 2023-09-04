@@ -1,4 +1,3 @@
-"use client";
 //Style bi loi
 
 import { useState } from "react";

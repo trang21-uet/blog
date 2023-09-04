@@ -1,19 +1,17 @@
-"use client";
-
 import { Paper } from "@mui/material";
 import Nav from "./Nav";
 import { memo } from "react";
 import { useBreakpoints } from "@/hooks";
 import { Logo } from "@/components";
-import { usePathname } from "next/navigation";
 import { HEADER_HEIGHT } from "@/constant";
 import { LOGIN_PATH, REGISTER_PATH } from "@/constant/path";
+import { useRouter } from "next/router";
 
 const AUTH_PATHS = [LOGIN_PATH, REGISTER_PATH];
 
 const Header = () => {
   const { isMd } = useBreakpoints();
-  const pathname = usePathname();
+  const { pathname } = useRouter();
 
   return (
     <Paper

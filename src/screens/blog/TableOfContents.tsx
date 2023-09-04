@@ -1,5 +1,3 @@
-"use client";
-
 import { IconButton, Text } from "@/components";
 import {
   List,

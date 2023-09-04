@@ -1,10 +1,8 @@
-"use client";
-
 import { memo } from "react";
 import Text from "./Text";
 import Link from "./Link";
 import { HOME_PATH } from "@/constant/path";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 type Props = {
   disabled?: boolean;
@@ -12,7 +10,7 @@ type Props = {
 
 const Logo = (props: Props) => {
   const { disabled = false } = props;
-  const pathname = usePathname();
+  const { pathname } = useRouter();
 
   return pathname === HOME_PATH || disabled ? (
     <Text noSelect variant="h4" sx={{ cursor: "initial" }}>

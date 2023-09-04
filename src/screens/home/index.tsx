@@ -1,4 +1,3 @@
-"use client";
 import { Text } from "@/components";
 import { useBlogs } from "@/store/blog";
 import { Box, Stack } from "@mui/material";

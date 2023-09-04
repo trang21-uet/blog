@@ -1,3 +1,4 @@
 import AppProvider from "./AppProvider";
+import ThemeProvider from "./ThemeProvider";
 
-export { AppProvider };
+export { AppProvider, ThemeProvider };

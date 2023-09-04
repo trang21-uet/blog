@@ -1,5 +1,3 @@
-"use client";
-
 import { InfoBlock } from "@/components";
 import Image from "@/components/Image";
 import Link from "@/components/Link";
@@ -11,14 +9,14 @@ import { formatDate } from "@/utils";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import PersonIcon from "@mui/icons-material/Person";
 import { Stack } from "@mui/material";
-import { useParams } from "next/navigation";
+import { useRouter } from "next/router";
 import { useEffect, useMemo } from "react";
 import TableOfContents from "./TableOfContents";
 
 const Blog = () => {
   const { item, isFetching, onGetBlog } = useBlog();
-  const params = useParams();
-  const { isSm, isMd, isXl } = useBreakpoints();
+  const { query } = useRouter();
+  const { isMd, isXl } = useBreakpoints();
 
   const imageHeight = useMemo(() => {
     switch (true) {
@@ -32,11 +30,11 @@ const Blog = () => {
   }, [isMd, isXl]);
 
   useEffect(() => {
-    if (!params || item) {
+    if (!query || item) {
       return;
     }
-    onGetBlog({ id: params?.id as string });
-  }, [item, onGetBlog, params]);
+    onGetBlog({ id: query?.id as string });
+  }, [item, onGetBlog, query]);
 
   return isFetching ? (
     <Loading />

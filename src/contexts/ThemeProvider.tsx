@@ -1,5 +1,3 @@
-"use client";
-
 import {
   Experimental_CssVarsProvider as CssVarsProvider,
   experimental_extendTheme as extendTheme,

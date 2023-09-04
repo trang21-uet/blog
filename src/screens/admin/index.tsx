@@ -1,5 +1,3 @@
-"use client";
-
 import AdminAppTable from "./admin.app.table";
 // import useSWRImmutable from 'swr/immutable';
 import useSWR from "swr";

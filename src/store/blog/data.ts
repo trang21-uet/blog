@@ -1,41 +1,25 @@
 const BLOGS = [
   {
     title:
-      "laboris fugiat exercitation cupidatat do cupidatat qui nostrud non consectetur",
+      "What is React?",
     paragraphs: [
       {
-        title: "minim laboris Lorem do nulla",
+        title: "Introduction",
         content:
-          "Sint dolor incididunt aute irure sint. Ad proident do ad commodo dolor dolore dolore. Amet cupidatat enim quis amet minim excepteur proident. In tempor ipsum anim labore ea dolor nulla minim. Lorem in minim laborum esse. Adipisicing exercitation laboris fugiat eiusmod ea in culpa in enim commodo culpa mollit exercitation.\r\n",
+          "Think it like the reaction in real life. Now if I touch in the corner of your belly. What will you do? You will react right. You will laugh, or you may slide from your position, or you will be angry with me if you do not know me personally.\r\n",
       },
       {
-        title: "ut consectetur irure quis laboris non",
-        content:
-          "Pariatur deserunt mollit est consectetur do ad magna laborum Lorem excepteur. Irure voluptate cillum consequat laboris do velit aute culpa minim aliquip veniam ut consequat. Exercitation elit officia laboris eiusmod culpa deserunt fugiat aute veniam et sint dolore esse ut. Qui esse aliqua enim dolor Lorem dolore fugiat nostrud voluptate ex.\r\n",
+        title: "Body",
+        content: "But in one way or another you will react. So that's it. When this reaction happens inside the web browser instead of you this calls React.\r\n",
       },
       {
-        title: "velit mollit nostrud aliqua eiusmod irure sunt",
-        content:
-          "Aliquip occaecat adipisicing id elit. Cupidatat laboris veniam irure in. Est incididunt consequat quis sunt anim. Voluptate occaecat mollit laborum duis velit non veniam laboris nostrud consectetur nisi aliqua. Id culpa fugiat magna dolore exercitation.\r\n",
-      },
-      {
-        title: "ut in laboris Lorem",
-        content:
-          "Proident laborum eu deserunt eu Lorem consectetur ullamco sit ad fugiat nisi nostrud excepteur. Exercitation anim adipisicing non incididunt occaecat exercitation. Ipsum mollit magna excepteur voluptate esse sint. Cupidatat sit occaecat et ipsum est est irure duis velit eu incididunt sint.\r\n",
-      },
-      {
-        title: "magna mollit proident occaecat consectetur reprehenderit elit",
-        content:
-          "Velit mollit voluptate non qui fugiat. Laborum labore eu sint pariatur officia amet ullamco sunt. Ex elit aliqua exercitation ex id elit id laborum in consequat veniam sit voluptate laboris. Adipisicing ut elit aliqua tempor aute voluptate nulla commodo eiusmod enim ullamco elit.\r\n",
-      },
-      {
-        title: "mollit do proident laborum est",
-        content:
-          "Ullamco cillum incididunt minim ad et in id irure incididunt do culpa laborum eiusmod. Tempor excepteur veniam aliqua culpa voluptate ex officia ullamco exercitation. Officia dolore eu qui excepteur duis elit anim in Lorem. Velit occaecat tempor proident anim ipsum eiusmod officia ad ea nisi. Commodo laboris consequat sunt laboris ipsum qui proident excepteur ex id do tempor est. Sunt enim consectetur elit ipsum dolor ex eiusmod velit laboris ea. Amet sint culpa tempor occaecat ipsum sit labore officia do consequat ullamco sunt.\r\n",
-      },
+        title: "Conclusion",
+        content: "Unlike traditional web apps when you click something or drag something that instant React, that instant data fetch without reloading the webpage. Yes my friend when you can achieve this kind of behavior using a JavaScript library called React. That is React JS.\r\n"
+      }
+      
     ],
     description:
-      "Veniam nisi pariatur non adipisicing. Eiusmod minim est voluptate veniam deserunt duis ea sunt nulla eiusmod fugiat reprehenderit do. Elit nostrud ipsum deserunt qui ipsum dolor proident. Anim sint nostrud ad ipsum labore reprehenderit aliquip eu Lorem veniam proident. Laboris ut consequat aliquip ipsum.\r\n",
+      "I will explain React to you like a five-year-old could even understand\r\n",
     id: "64e7805a93f5d8bc4d97c4b6",
     author: "Sims Coleman",
     createdAt: 1691851270000,
@@ -43,155 +27,137 @@ const BLOGS = [
   },
   {
     title:
-      "eiusmod aliqua commodo ex pariatur aliquip veniam aliqua ut occaecat",
+      "What is Lorem Ipsum?",
     paragraphs: [
       {
-        title: "dolore ad commodo ipsum veniam adipisicing non",
+        title: "Introduction to Lorem Ipsum",
         content:
-          "Lorem excepteur irure non dolore enim laborum ut aliquip voluptate ad nulla. Enim consequat commodo amet pariatur sint aute proident velit. Eiusmod non do duis ipsum magna anim occaecat in amet. Ea voluptate labore anim enim quis aliquip eu anim. Proident proident reprehenderit adipisicing consequat cillum dolor ullamco aliqua sit. Fugiat do adipisicing esse sit est. Voluptate velit culpa nisi elit labore culpa aliquip occaecat nisi in.\r\n",
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\r\n",
       },
       {
-        title: "eiusmod irure ullamco ea nulla non",
+        title: "Why do we use it?",
         content:
-          "Esse fugiat velit do consectetur sunt velit anim proident veniam adipisicing. Dolor deserunt consequat non qui. Et laborum ea excepteur culpa magna. Id tempor consectetur enim aliqua sunt anim proident ad fugiat dolore.\r\n",
+          "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).\r\n",
       },
       {
-        title: "consequat tempor consequat",
+        title: "Where does it come from?",
         content:
-          "Voluptate excepteur eu tempor duis aute. Minim eu eiusmod anim labore aute anim esse proident ex adipisicing tempor commodo tempor. Cupidatat mollit id velit laborum occaecat magna culpa fugiat officia proident ex dolor elit. Nisi excepteur officia reprehenderit incididunt ex magna.\r\n",
-      },
-      {
-        title: "commodo qui eu ex anim sunt id",
-        content:
-          "Consectetur officia dolor eu fugiat sint anim dolore ipsum. Velit laboris adipisicing sunt officia anim magna officia proident proident veniam. Et eu quis occaecat labore. Reprehenderit enim nulla aliqua adipisicing incididunt magna mollit commodo anim irure.\r\n",
-      },
-      {
-        title: "officia cillum culpa elit",
-        content:
-          "Laborum do anim cillum cillum nisi. Aliquip nostrud est aliqua pariatur proident officia exercitation incididunt non sint. Do ad nostrud cupidatat ea ad culpa in cillum dolore eu.\r\n",
-      },
-      {
-        title: "veniam deserunt excepteur exercitation labore",
-        content:
-          "Elit culpa amet aliqua aute aute ut exercitation enim. Reprehenderit voluptate qui sunt sunt velit laborum ex pariatur. Lorem labore excepteur qui non pariatur et minim ullamco commodo tempor exercitation. Labore duis nulla eu culpa irure ut et minim dolore aute anim dolore quis laboris. Quis deserunt dolor veniam deserunt voluptate nostrud magna consectetur. Eiusmod magna qui mollit in irure ea. Eiusmod amet officia Lorem fugiat quis occaecat magna proident nostrud.\r\n",
-      },
-      {
-        title: "culpa minim in deserunt officia",
-        content:
-          "Quis deserunt eu duis Lorem dolor consectetur voluptate sunt dolore. Labore est amet veniam ipsum cillum. Nostrud non non adipisicing veniam laborum deserunt. Eiusmod sunt sint officia ut nostrud sit occaecat et velit laboris cupidatat labore. Est voluptate reprehenderit qui magna minim id exercitation officia laboris enim eu culpa. Nostrud quis excepteur nostrud nostrud eu nostrud ut exercitation amet fugiat. Quis ad labore eu voluptate aliquip Lorem sit aliquip est.\r\n",
-      },
+          "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\r\n",
+      }
     ],
     description:
-      "Et et nisi nulla sunt consectetur sint magna non ad aute enim ex dolore esse. Officia cillum incididunt excepteur commodo fugiat enim ea veniam veniam in. Sint laboris nisi occaecat sit et. Proident cupidatat labore quis enim. Irure ipsum exercitation nostrud eiusmod ex reprehenderit magna culpa amet incididunt proident ad velit ut. Dolor velit ullamco est culpa est laborum nisi.\r\n",
+      "Tại sao lập trình viên web nên biết dùng Lorem Ipsum\r\n",
     id: "64e7805a6b9387fb0ae18e7e",
     author: "Russo Mcgee",
     createdAt: 1691851270000,
     updatedAt: 1692196870000,
   },
   {
-    title: "amet aliquip anim veniam tempor esse ut aute aliqua fugiat",
+    title: "Hiểu rõ về JSON là gì? Cách lấy dữ liệu từ JSON",
     paragraphs: [
       {
-        title: "aliqua et sunt",
+        title: "JSON là gì?",
         content:
-          "Elit incididunt magna enim sint amet duis dolor. Amet magna elit in ea commodo aute ad. Cillum non cillum deserunt mollit velit Lorem reprehenderit sit. Adipisicing consequat sunt aliquip dolore laborum consectetur et aute nisi. Sunt consequat velit voluptate aliquip in fugiat qui irure officia. Aliqua pariatur irure aliquip culpa qui esse. Sint nostrud et amet anim eiusmod adipisicing incididunt eiusmod.\r\n",
+          "JSON là viết tắt của JavaScript Object Notation, là một kiểu định dạng dữ liệu tuân theo một quy luật nhất định mà hầu hết các ngôn ngữ lập trình hiện nay đều có thể đọc được. JSON là một tiêu chuẩn mở để trao đổi dữ liệu trên web.\r\n",
       },
       {
-        title: "sint qui in quis non nostrud",
+        title: "Định nghĩa",
         content:
-          "Magna sunt mollit labore sit aliqua amet culpa anim. Anim nulla Lorem do fugiat nisi. Officia duis amet magna quis.\r\n",
+          "Định dạng JSON sử dụng các cặp key – value để dữ liệu sử dụng. Nó hỗ trợ các cấu trúc dữ liệu như đối tượng và mảng. Giá trị key trong JSON có thể là chuỗi (string), số (numner), rỗng (null), mảng (array), hoặc đối tượng (object). File json có thể được lưu với bất kỳ phần mở rộng nào, tuy nhiên thông thường thì nó được lưu dưới phần mở rộng là .json hoặc .js.\r\n",
       },
       {
-        title: "reprehenderit nulla consectetur velit",
-        content:
-          "Tempor ut incididunt sunt aliqua exercitation sunt adipisicing exercitation adipisicing consequat irure qui. Aute nulla id id eu ullamco anim ea. Anim deserunt culpa irure aliqua reprehenderit consequat officia dolor velit elit minim eiusmod nisi adipisicing. Deserunt dolor magna id sunt sit qui. Aliquip laborum elit adipisicing mollit et.\r\n",
+        title: "Cấu trúc chuỗi JSON",
+        paragraph: [ 
+          { 
+            title: "Object là gì?",
+            content: "Object trong Json được thể hiện bằng dấu ngoặc nhọn {}. Khái niệm Object trong Json cũng khá tương đồng với Object trong Javascript.\r\n",
+          },
+          {
+            title: "Nên sử dụng JSON khi nào?",
+            content: "Đó là khi bạn muốn lưu trữ dữ liệu đơn thuần dưới dạng metadata ở phía server. Chuỗi JSON sẽ được lưu vào database và sau đó khi cần dữ liệu thì sẽ được giải mã. Ví dụ với PHP, nó cung cấp các hàm liên quan đến JSON để mã hóa hoặc giải mã là json_encode và json_decode.\r\n"
+          }
+        ]
       },
       {
-        title: "dolore consequat veniam",
+        title: "Conclusion",
         content:
-          "Exercitation nostrud ipsum incididunt cillum aliquip voluptate veniam quis sit excepteur elit amet. Sunt dolore non culpa ipsum velit aliqua. Duis adipisicing nisi voluptate pariatur laboris. Veniam qui et proident magna consequat pariatur dolor ex. Veniam tempor laboris excepteur sunt deserunt. Do aliqua do amet reprehenderit sit ea.\r\n",
-      },
-      {
-        title: "ex culpa nisi adipisicing in nulla ut",
-        content:
-          "Esse laboris dolor quis dolor proident ea do magna amet ullamco magna labore et sit. In deserunt laboris adipisicing velit nisi sunt occaecat cupidatat irure cillum officia. Esse ea nisi eu non ullamco incididunt ad ullamco reprehenderit commodo tempor sunt quis ullamco. Id incididunt consequat velit veniam nulla consectetur mollit id mollit eiusmod magna velit excepteur. Ad dolore labore tempor veniam cillum sunt do cupidatat sunt.\r\n",
-      },
+          "Hy vọng với bài viết này bạn sẽ hiểu rõ hơn về JSON là gì cũng như các ứng dụng và cấu trúc của nó như thế nào. Đừng quên cập nhật thêm các nội dung mới hữu ích cho các Dever tại TopDev Blog nhé! Cảm ơn các bạn vì đã luôn ủng hộ chúng tớ.\r\n",
+      }
     ],
     description:
-      "Nisi in veniam exercitation nostrud mollit labore nisi commodo irure. Veniam voluptate nulla voluptate do minim anim dolor tempor irure magna cillum culpa aliquip. Duis proident commodo irure laborum nostrud. Labore ipsum non cillum dolor sunt ad duis minim laboris cillum ipsum irure. Irure irure elit esse occaecat voluptate et consequat consectetur ut aliqua adipisicing.\r\n",
+      "Tại sao JSON lại phổ biến trong lập trình ứng dụng web?\r\n",
     id: "64e7805a9d243f6dcf65d3a8",
-    author: "Mcleod Mendez",
+    author: "Top Dev",
     createdAt: 1691851270000,
     updatedAt: 1692196870000,
   },
   {
-    title: "irure enim duis nulla eiusmod consequat voluptate aliqua irure qui",
+    title: "As an IT professional, what is the advantage of learning Japanese?",
     paragraphs: [
       {
-        title: "officia ex magna ipsum",
+        title: "Point 1: Japan is a major player in the global technology industry",
         content:
-          "Qui enim consequat aute do. Exercitation nisi reprehenderit ex est ea magna et irure minim consectetur dolor non. Nostrud enim velit cupidatat sit et et. Veniam cupidatat deserunt consequat Lorem fugiat sint duis. Cillum tempor officia culpa et sit commodo pariatur officia eiusmod labore.\r\n",
+          "Japan is a major player in the global technology industry, with many companies and organizations based there that are involved in the development and production of cutting-edge technology. By learning Japanese, you may be able to better understand and engage with these companies and organizations, potentially opening up new job or career opportunities.\r\n",
       },
       {
-        title: "labore voluptate consectetur labore mollit",
+        title: "Point 2: Japan is also a major market for technology products and services",
         content:
-          "Adipisicing ea culpa et voluptate voluptate. Ex laboris nostrud minim laborum adipisicing magna reprehenderit in quis nisi nostrud. Laborum in cupidatat incididunt cupidatat in. Enim amet nulla pariatur sit commodo qui amet tempor fugiat eu. Ea incididunt culpa cupidatat tempor anim id pariatur qui Lorem non aliquip tempor nulla. Officia ex consequat id eiusmod est occaecat velit consequat esse sit.\r\n",
+          "Japan is also a major market for technology products and services, and many companies that do business there may be looking for IT professionals who can speak Japanese in order to better communicate with and serve their Japanese customers.\r\n",
       },
       {
-        title: "do aliquip excepteur aliquip culpa",
+        title: "Point 3: Additionally, Japan has a unique culture and way of doing things",
         content:
-          "Sunt est elit minim ad. Amet quis minim aliquip adipisicing aute irure exercitation ut labore eu occaecat veniam mollit. Ea fugiat eiusmod cillum sit ullamco do sint reprehenderit irure. Dolore enim sunt deserunt veniam eiusmod occaecat. Mollit deserunt cillum do aliqua pariatur. Tempor magna nulla duis exercitation esse. Id irure consequat excepteur in veniam.\r\n",
+          "Additionally, Japan has a unique culture and way of doing things that can be difficult to understand without knowledge of the language. By learning Japanese, you may be able to better understand and appreciate this culture, which in turn can help you to better understand and work with Japanese people and organizations.\r\n",
       },
       {
-        title: "culpa consequat ea sit nulla eiusmod enim",
+        title: "Point 4: Furthermore, learning a new language can be a valuable skill",
         content:
-          "Commodo fugiat in dolore pariatur sint. Ex id dolor ad eu. Deserunt cillum do pariatur velit.\r\n",
+          "Furthermore, learning a new language can be a valuable skill in and of itself, as it can help to improve cognitive abilities and can be a useful addition to your resume.\r\n",
       },
       {
-        title: "culpa eiusmod elit consequat consectetur qui ullamco",
-        content:
-          "Adipisicing duis deserunt deserunt fugiat quis cupidatat id est. Consectetur voluptate nulla consequat minim. Aliqua magna incididunt proident commodo proident aliqua in dolor. Commodo irure non nulla qui sit id ipsum adipisicing consectetur eu excepteur nostrud. Velit nisi est eu duis nostrud quis pariatur magna occaecat esse voluptate. Cillum proident sit mollit dolor sit dolor. Elit et in culpa sint officia proident.\r\n",
-      },
+        title: "Point 5: Finally, many people around the globe love Anime and Manga",
+        content: "Finally, many people around the globe love Anime and Manga, making Japanese language skills a valuable asset for IT professionals. The advantage of learning Japanese in the IT field is multifaceted. Firstly, Japan has a significant influence on the technology and gaming industries, producing numerous innovative products and services. By understanding Japanese, IT professionals can directly interact with Japanese companies, developers, and industry experts, gaining access to a wealth of knowledge, collaboration opportunities, and potential business partnerships. Additionally, learning Japanese allows IT professionals to tap into a vast pool of resources, including technical documentation, forums, and online communities that may not be available in English or other languages. This linguistic advantage enables IT professionals to stay updated with the latest technological advancements, programming languages, and software solutions originating from Japan. Furthermore, being able to communicate with Japanese clients or colleagues in their native language fosters stronger professional relationships, enhances cross-cultural understanding, and can lead to improved project outcomes. Overall, acquiring proficiency in Japanese can provide IT professionals with a competitive edge, expanding their career opportunities and enabling them to thrive in a globalized IT landscape that increasingly values diversity and multiculturalism.\r\n"
+      }
     ],
     description:
-      "Ea consectetur excepteur dolor ipsum deserunt amet veniam ut. Pariatur mollit cillum cillum amet dolor non labore irure. Mollit adipisicing qui dolore officia duis consequat enim nulla minim nisi irure. Qui est ea laboris nulla velit occaecat veniam veniam aliquip. Culpa velit nisi officia proident ut consectetur.\r\n",
+      "As an IT professional, there are several potential advantages to learning Japanese. Here are a few key points:...\r\n",
     id: "64e7805af58836ddcf347c2c",
-    author: "Fischer Harris",
+    author: "Poe-ChatGPTBot",
     createdAt: 1691851270000,
     updatedAt: 1692196870000,
   },
   {
-    title: "dolor pariatur magna fugiat eu proident eiusmod irure enim sit",
+    title: "Stephen Hawking: \"Trí tuệ nhân tạo sẽ là dấu chấm hết cho loài người\"",
     paragraphs: [
       {
-        title: "amet elit cupidatat in ad sint",
+        title: "Stephen Hawking đã tuyên bố trong hội nghị Zeitgeist 2015 tại London",
         content:
-          "Elit aliquip laborum ea nisi id sunt velit enim ea sint ea culpa excepteur. Enim duis proident ad est cupidatat fugiat consectetur aliquip exercitation duis exercitation. Incididunt anim excepteur dolore reprehenderit tempor laboris quis minim. Incididunt laboris aliquip adipisicing fugiat aute duis labore irure aliquip incididunt.\r\n",
+          "Trước đó, giáo sư Stephen Hawking đã tuyên bố trong hội nghị Zeitgeist 2015 tại London: \"Chúng ta có thể phải đối mặt với một cuộc nổi dậy của robot có trí thông minh nhân tạo trong thế kỷ tới\".\r\n",
       },
       {
-        title: "adipisicing pariatur do adipisicing sint officia ea",
+        title: "Stephen Hawking đưa ra một dự đoán đáng lo ngại cho tương lai của nhân loại với trí thông minh nhân tạo",
         content:
-          "Duis minim labore est cillum consequat sint labore id sint excepteur commodo. Aliquip Lorem anim sit nostrud do ipsum dolor Lorem amet nostrud excepteur consequat consectetur. Quis elit exercitation in fugiat. Sit cillum ea non et irure ea. Sunt laboris reprehenderit deserunt eu. Eu laborum tempor eiusmod in. Reprehenderit duis veniam non in.\r\n",
+          "Nhà vật lý nổi tiếng thế giới Stephen Hawking đưa ra một dự đoán đáng lo ngại cho tương lai của nhân loại với trí thông minh nhân tạo trong chương trình hỏi đáp AskMeAnything (AMA) trên Reddit, ông dự đoán rằng việc máy móc phát triển quá nhanh sẽ đào sâu thêm sự bất công trong xã hội: \"Nếu máy móc có thể sản xuất tất cả mọi thứ chúng ta cần thì cuộc sống con người sẽ phụ thuộc vào cách mọi thứ được phân phối - tất cả mọi người có thể tận hưởng một cuộc sống sang trọng nếu tài sản do máy móc sản xuất được chia sẻ, hoặc hầu hết mọi người có thể lâm phải cảnh nghèo khó nếu không có sự phân chia bình đẳng. Cho đến thời điểm này, xu hướng thứ hai đang càng ngày trở nên rõ ràng.\"\r\n",
       },
       {
-        title: "cillum proident ad",
+        title: "Đây không phải là lần đầu tiên Hawking đã chỉ ra việc công nghệ phát triển quá nhanh có khả năng gây tổn hại cho nhân loại",
         content:
-          "Veniam adipisicing deserunt excepteur Lorem labore occaecat do Lorem mollit. Eiusmod culpa Lorem do consequat aliquip. Reprehenderit ullamco non mollit cillum duis anim culpa ipsum. Enim proident dolore aliqua nostrud. Dolore sit est veniam cillum dolor dolore magna ut labore est adipisicing proident. Laboris ipsum laborum deserunt exercitation.\r\n",
+          "Đây không phải là lần đầu tiên Hawking đã chỉ ra việc công nghệ phát triển quá nhanh có khả năng gây tổn hại cho nhân loại. Trước đó trong một cuộc phỏng vấn BBC năm 2014, Hawking nói rằng ông tin rằng \"sự phát triển của trí tuệ nhân tạo đầy đủ (AI) có thể báo hiệu sự kết thúc của nhân loại\". Bên cạnh đó, ông cũng là đồng tác giả với hai nhà nghiên cứu AI Stuart Russell và Max Tegmark trong tuyên bố khá shock trên tờ Independent: \"Sáng tạo ra AI sẽ là bước tiến lớn nhất trong lịch sử loài người, đáng tiếc là nó cũng có thể phát minh vĩ đại cuối cùng của chúng ta. AI có thể thay đổi nền kinh tế của chúng ta để mang lại cho những lợi ích ngoài sức tưởng tượng và những hậu quả cực kỳ khủng khiếp.\"\r\n",
       },
       {
-        title: "ipsum reprehenderit aliqua",
+        title: "Con người nên quan tâm và lo lắng nếu AI (trí thông minh nhân tạo) có thể kiểm soát mọi thứ",
         content:
-          "Ea qui nostrud sit exercitation incididunt duis nulla Lorem dolor mollit amet velit veniam. Velit enim adipisicing enim ex exercitation adipisicing ut cupidatat sunt consequat consequat. Nulla labore ad aliquip in consectetur ipsum anim veniam consequat aute duis duis fugiat do. Nisi voluptate magna fugiat aute ipsum duis amet et. Ullamco veniam laboris minim sit.\r\n",
+          "Trước đó, giáo sư Stephen Hawking đã tuyên bố trong hội nghị Zeitgeist 2015 tại London: \"Chúng ta có thể phải đối mặt với một cuộc nổi dậy của robot có trí thông minh nhân tạo trong thế kỷ tới\". Con người nên quan tâm và lo lắng nếu AI (trí thông minh nhân tạo) có thể kiểm soát mọi thứ, và ông cũng cảnh báo rằng AI có thể báo hiệu sự kết thúc của nhân loại. \"Máy tính sẽ vượt qua con người trong vòng 100 năm tới\", ông nói thêm, \" và khi điều đó xảy ra, chúng ta cần phải chắc chắn rằng các máy tính được tạo ra để thực hiện mục tiêu phù hợp. Tương lai chúng ta sẽ có một cuộc chạy đua giữa sức mạnh công nghệ và sự khôn ngoan khi chúng ta sử dụng nó.\"\r\n",
       },
       {
-        title: "nostrud enim nulla ex aliqua",
+        title: "Nhiều chuyên gia nghiên cứu AI cũng nghĩ rằng bất kỳ AI nào đều có tiềm năng gây ra một mối đe dọa cho nhân loại",
         content:
-          "Officia minim elit amet consectetur irure ex veniam pariatur in nisi mollit. Ex minim ut proident dolor Lorem officia laboris ut incididunt eu voluptate. Eu occaecat tempor est deserunt in in.\r\n",
+          "Nhiều chuyên gia nghiên cứu AI cũng nghĩ rằng bất kỳ AI nào đều có tiềm năng gây ra một mối đe dọa cho nhân loại là hoàn toàn có cơ sở, thậm chí nó có thể xảy ra trong tương lai không xa. Thậm chí, họ cũng đồng ý rằng AI đủ khả năng để lại những hậu quả thảm khốc về vấn đề việc làm và bình đẳng xã hội. Toby Walsh, giáo sư chuyên nghiên cứu trí thông minh nhân tạo tại Trung tâm thông tin và công nghệ truyền thông quốc gia của Australia nói rằng trong tương lai sẽ không có một công việc nào mà AI không thể làm được: \"Thật khó có thể nghĩ ra một công việc máy móc không thể làm tốt hơn so với những gì con người có thể làm. Công nghệ thực sự là một nguyên nhân đào sâu thêm sự bất bình đẳng trong xã hội. Đây là một thách thức không chỉ dành cho các nhà khoa học mà còn cả xã hội trong việc xây dựng một thế giới tốt đẹp hơn.\"\r\n",
       },
       {
-        title: "mollit quis nulla anim do",
+        title: "Trí tuệ nhân tạo nói riêng và công nghệ nói chung không phải là nguyên nhân duy nhất có thể thay đổi hướng đi của kinh tế thế giới trong tương lai",
         content:
-          "Nostrud pariatur proident enim reprehenderit Lorem. Irure adipisicing laborum excepteur culpa eu Lorem ut ex ipsum consequat aliqua exercitation sit. Nostrud deserunt ex exercitation ea ad minim culpa nisi adipisicing eu pariatur. Minim duis aute magna nisi aute labore pariatur. Veniam aliquip amet anim laboris ad ea.\r\n",
+          "Trí tuệ nhân tạo nói riêng và công nghệ nói chung không phải là nguyên nhân duy nhất có thể thay đổi hướng đi của kinh tế thế giới trong tương lai. Nhưng dù thế nào đi nữa, ý kiến của Stephen Hawking có vẻ như đang trở nên đúng dần theo thời gian. Đến cuối năm 2015, mặc dù tỷ lệ phần trăm dân số thế giới sống trong nghèo đói cùng cực được dự báo sẽ giảm xuống con số thấp nhất từ trước đến nay, nhưng bất bình đẳng và chênh lệch thu nhập đang ngày một tăng lên trên toàn thế giới.\r\n",
       },
       {
         title: "laboris commodo est id mollit cillum",
@@ -200,53 +166,48 @@ const BLOGS = [
       },
     ],
     description:
-      "Anim est culpa est dolore aute do do cupidatat. Dolor labore amet est irure ut aute labore. Tempor ut aliqua anim ad esse velit ullamco adipisicing. Elit ea qui excepteur esse sint cillum. Velit officia qui qui exercitation eu quis voluptate aliqua in.\r\n",
+      "AI is so powerful but also very scary\r\n",
     id: "64e7805a7acf5278ef55ed45",
-    author: "Alexander Jefferson",
+    author: "GenK",
     createdAt: 1691851270000,
     updatedAt: 1692196870000,
   },
   {
-    title: "dolor pariatur magna fugiat eu proident eiusmod irure enim sit",
+    title: "Sinh Viên IT: 5 điều cần làm để giữ gìn sức khỏe!",
     paragraphs: [
       {
-        title: "amet elit cupidatat in ad sint",
+        title: "Bảo vệ đôi mắt",
         content:
-          "Elit aliquip laborum ea nisi id sunt velit enim ea sint ea culpa excepteur. Enim duis proident ad est cupidatat fugiat consectetur aliquip exercitation duis exercitation. Incididunt anim excepteur dolore reprehenderit tempor laboris quis minim. Incididunt laboris aliquip adipisicing fugiat aute duis labore irure aliquip incididunt.\r\n",
+          "Việc giữ gìn đôi mắt thực sự là rất quan trọng đó các bạn à! Hồi mình học lớp 12, mình bắt đầu phát hiện mình bị cận 0.5 độ, và mình từng mừng thầm vì nghĩ đeo kính trông sẽ rất ngầu lắm đây. Nhưng không các bạn à, nó mang lại cho mình vô số phiền toái. Mình có hỏi mấy đứa bạn mình cận 5-6 độ cảm giác nó như thế nào? Thì mình mới thấy cận nó khổ như thế nào. Haizz. Đúng là tuổi trẻ chưa trải sự đời, suy nghĩ quá nông nổi 😀Học IT, mình tiếp xúc thường xuyên với màn hình máy tính, có khi cả ngày ôm máy nên nguy cơ cận và tăng độ cận là rất cao.Đặc biệt các bạn sinh viên có một thói quen là tắt hết đèn (không biết có phải để tiết kiệm điện không) và chỉ mở mỗi màn hình máy tính rồi lướt web, chơi game trong màn đêm. Điều này thực sự rất có hại cho mắt, vì mắt phải điều tiết và căng ra để nhìn dẫn đến bị lóa nếu mở lại đèn do mắt phải làm việc trong điều kiện thiếu sáng. Vì vậy để bảo vệ mắt các bạn học IT nên ưu tiên chọn cho mình một chiếc máy tính có màn hình với thiết kế bảo vệ mắt. Không nên ngồi trước máy tính liên tục trong một khoảng thời gian dài, khoảng 30 phút nên thư giãn mắt một lần. Và đặc biệt không tắt đèn rồi mở sáng màn hình máy tính (tương tự với điện thoại nha các bạn).\r\n",
       },
       {
-        title: "adipisicing pariatur do adipisicing sint officia ea",
+        title: "Không thức quá khuya",
         content:
-          "Duis minim labore est cillum consequat sint labore id sint excepteur commodo. Aliquip Lorem anim sit nostrud do ipsum dolor Lorem amet nostrud excepteur consequat consectetur. Quis elit exercitation in fugiat. Sit cillum ea non et irure ea. Sunt laboris reprehenderit deserunt eu. Eu laborum tempor eiusmod in. Reprehenderit duis veniam non in.\r\n",
+          "Thức khuya có lẽ là đặc sản của mấy ông học IT. Có thể là để học, làm bài tập hoặc chơi game, cũng có khi do mất ngủ vì crush… Nói chung là có muôn vàn lý do để các ông thức đến tận 3-4 giờ sáng, khiến sáng hôm sau thức dậy trong trạng thái lờ đà lờ đờ, như nghiện. Mình cũng từng trải qua giai đoạn này rồi nên mình hiểu lắm, thức khuya để học liên tục trong khoảng hơn một tháng, và rồi mình thấy sức khỏe đi xuống rõ rệt. Theo khuyến cáo thì chúng ta nên đi ngủ trước 23h đêm, nhưng mình biết các bạn học IT thường không thể ngủ vào tầm này được. Vậy nên sẽ có hai hướng giải quyết cho bạn, đó là buộc mình phải đi ngủ sớm, tức là bạn rèn thói quen ngủ sớm dậy sớm. Thời gian đầu có thể hơi khó vì nó thay đổi nhịp sinh học của các bạn, nhưng dần dần rồi sẽ quen thôi. Cách thứ hai là vẫn thức nhưng không thức quá khuya (ngủ trước 1h sáng). Mình cũng áp dụng cách này vì thực sự nhiều khi nhiều việc không thể ngủ sớm hơn được. Nhưng nếu thức các bạn nên chuẩn bị đồ ăn nhẹ và dưỡng ẩm da để không bị lên mụn. Kết luận lại phần này là tuyệt đối không được thức quá khuya và luôn luôn phải ngủ đủ giấc nha các bạn.\r\n",
       },
       {
-        title: "cillum proident ad",
+        title: "Lưu ý đến chế độ ăn uống",
         content:
-          "Veniam adipisicing deserunt excepteur Lorem labore occaecat do Lorem mollit. Eiusmod culpa Lorem do consequat aliquip. Reprehenderit ullamco non mollit cillum duis anim culpa ipsum. Enim proident dolore aliqua nostrud. Dolore sit est veniam cillum dolor dolore magna ut labore est adipisicing proident. Laboris ipsum laborum deserunt exercitation.\r\n",
+          "Ăn uống có lẽ là vấn đề chung của các bạn sinh viên. Câu chuyện bỏ bữa, nhịn ăn sáng nó diễn ra như cơm bữa vậy. Nguyên nhân xuất phát từ việc các bạn lười nấu ăn, hoặc do bận việc quá nên không có thời gian để nấu ăn, hoặc cũng có thể là hết tiền, thiếu tiền mua đồ ăn… Mình cũng từng trải qua giai đoạn này và mình đoán nhiều bạn cũng sẽ đã và đang như vậy. Sinh viên mà, có khi cả ngày chỉ ăn mỗi gói mỳ tôm. Bảo sao không gầy gò ốm yếu cho được! Thực ra, để duy trì một chế độ ăn uống đúng và dinh dưỡng thì là rất khó cho cả người có thời gian, có tiền chứ đừng nói đến các bạn sinh viên. Vì nó phụ thuộc vào sự chăm chỉ và kiên trì của mỗi người, và đặc biệt là kinh tế nữa. Đâu phải bạn sinh viên nào cũng có thể dậy sớm nấu cơm, làm đồ ăn. Có tiền chạy ra mua cái bánh mỳ, không có thì ôm bụng đói đi học… Nhưng mình lưu ý lại đó là việc ăn uống có thể không cần phải quá cầu kỳ, nhưng nhất định không được bỏ bữa, nhịn ăn quá nhiều (đặc biệt là bữa sáng). Điều này sẽ để lại hệ lụy về sức khỏe mà sau này nhìn lại có khi bạn sẽ hối hận đó.\r\n",
       },
       {
-        title: "ipsum reprehenderit aliqua",
+        title: "Tập thể dục, tập gym, vận động",
         content:
-          "Ea qui nostrud sit exercitation incididunt duis nulla Lorem dolor mollit amet velit veniam. Velit enim adipisicing enim ex exercitation adipisicing ut cupidatat sunt consequat consequat. Nulla labore ad aliquip in consectetur ipsum anim veniam consequat aute duis duis fugiat do. Nisi voluptate magna fugiat aute ipsum duis amet et. Ullamco veniam laboris minim sit.\r\n",
+          "Chắc các bạn nhìn mấy ông học IT mà đô con thì thấy hơi “vô lý”, nhưng mà mình từng gặp nhiều bạn Gymer code trâu ra phết! Thực ra việc tập thể dục hay tập gym nếu các bạn nghĩ theo hướng cải thiện thể hình thì các bạn sẽ phải đầu tư thời gian rất nhiều, thậm chí là cả tiền bạc nữa. Cá nhân mình không tập gym gì cả nhưng mình vẫn thường xuyên chạy bộ và tập thể dục nên thể hình tuy không được đô con lắm, nhưng cũng không đến nỗi “gầy còm” như các bạn hay nghĩ về mấy bạn học IT. Nói về việc tập thể dục thì mình nghĩ nhiều bạn học IT nói riêng và nhiều bạn sinh viên nói chung cũng ý thức được tác dụng của nó, nhưng phần đa các bạn còn lười. Thời gian đấy ai lướt Facebook cho, ai chơi Liên Quân cho ●﹏● Vậy làm sao để chăm chỉ tập luyện hơn? Thực ra cái này phụ thuộc vào nhận thức và ý chí của mỗi người. Khi bạn nhận thức được tác dụng của việc tập thể dục, nâng cao thể chất thì bạn sẽ nỗ lực để đạt được thôi.\r\n",
       },
       {
-        title: "nostrud enim nulla ex aliqua",
+        title: "Chơi một bộ môn nghệ thuật",
         content:
-          "Officia minim elit amet consectetur irure ex veniam pariatur in nisi mollit. Ex minim ut proident dolor Lorem officia laboris ut incididunt eu voluptate. Eu occaecat tempor est deserunt in in.\r\n",
+          "Nghe có vẻ như việc chơi một bộ môn nghệ thuật không có ảnh hưởng gì đến sức khỏe? Nhưng nếu các bạn nghĩ vậy thì hoàn toàn sai rồi đấy. Nếu như tập thể dục hay tập gym giúp bạn nâng cao thể chất thì việc chơi một bộ môn nghệ thuật giúp bạn thoải mái về tinh thần. Tinh thần có tốt thì làm việc mới ổn được đúng không ạ ! Mình cũng biết chơi sáo và đàn guitar, thực sự có những lúc mệt mỏi mình thường ôm cây guitar gảy mấy bài quen quen, cảm giác như mọi mệt mỏi đều tan đi hết. Vì vậy mình khuyên các bạn nên theo đuổi một bộ môn nghệ thuật hoặc đơn giản là chơi một loại nhạc cụ nào đó để tinh thần của các bạn được thoải mái hơn.\r\n",
       },
       {
-        title: "mollit quis nulla anim do",
+        title: "Kết luận",
         content:
-          "Nostrud pariatur proident enim reprehenderit Lorem. Irure adipisicing laborum excepteur culpa eu Lorem ut ex ipsum consequat aliqua exercitation sit. Nostrud deserunt ex exercitation ea ad minim culpa nisi adipisicing eu pariatur. Minim duis aute magna nisi aute labore pariatur. Veniam aliquip amet anim laboris ad ea.\r\n",
-      },
-      {
-        title: "laboris commodo est id mollit cillum",
-        content:
-          "Ullamco ex commodo proident do adipisicing do et. Consequat magna do ea eu ipsum ad aliquip mollit. Et adipisicing officia dolore quis laborum officia voluptate eiusmod ea ut ad ullamco nisi deserunt. Excepteur do voluptate tempor anim ad ex. Laboris exercitation non aliqua ut cupidatat et laboris in veniam ipsum in non ea excepteur.\r\n",
+          "Vâng, 5 điều này có lẽ chưa phải là tất cả nhưng mình hi vọng các bạn sinh viên nói chung và các bạn sinh viên IT nói riêng nên lưu ý những điều cơ bản nhất này. Đừng suốt ngày cắm mắt vào chiếc màn hình máy tính/ điện thoại nha các bạn. Chúc các bạn sinh viên luôn giữ được một sức khỏe tốt, nên nhớ các bạn là tương lai của Việt Nam đấy. Hẹn gặp lại các bạn trong các bài viết tiếp theo !\r\n",
       },
     ],
     description:
-      "Anim est culpa est dolore aute do do cupidatat. Dolor labore amet est irure ut aute labore. Tempor ut aliqua anim ad esse velit ullamco adipisicing. Elit ea qui excepteur esse sint cillum. Velit officia qui qui exercitation eu quis voluptate aliqua in.\r\n",
+      "Trước giờ, chắc hẳn nhiều bạn vẫn hình dung những bạn học IT thường là những bạn gầy còm, ốm yếu với cặp kính cận nhìn trông không khác gì mọt sách đúng không ạ. Vâng, cũng đúng thôi vì mình học IT nên mình hiểu rằng suy nghĩ đó xuất phát từ thực tế, chứ không phải là định kiến hay là cách nhìn phiến diện về các bạn học IT. Phần đa các bạn học IT thường là những bạn khá giỏi, mà giỏi thì thường chăm học, mà chăm học thì thường bỏ lơ những điều khác trong đó có việc chăm sóc bản thân. Chính vì vậy, ở trong bài viết này mình sẽ chia sẻ với bạn 5 điều mà những bạn học IT NÊN làm để giữ gìn sức khỏe của mình được tốt hơn.\r\n",
     id: "64e7805a7acf5278ef55ed46",
     author: "Alexander Jefferson",
     createdAt: 1691851270000,

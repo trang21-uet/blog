@@ -24,7 +24,6 @@ const authSlice = createSlice({
     builder
       .addCase(login.pending, (state) => {
         state.userStatus = DataStatus.LOADING;
-        console.log("loading");
       })
       .addCase(
         login.fulfilled,

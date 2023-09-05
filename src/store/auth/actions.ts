@@ -1,7 +1,7 @@
 import apiClient, { Endpoint } from "@/api";
-import { AN_ERROR_TRY_AGAIN } from "@/constant";
+import { AN_ERROR_TRY_AGAIN, WRONG_LOGIN_INFO } from "@/constant";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { HttpStatusCode } from "axios";
+import { Axios, AxiosError, HttpStatusCode } from "axios";
 import { LoginInfo, RegisterInfo } from "./types";
 
 export const login = createAsyncThunk("auth/login", async (info: LoginInfo) => {
@@ -12,6 +12,8 @@ export const login = createAsyncThunk("auth/login", async (info: LoginInfo) => {
     }
     throw AN_ERROR_TRY_AGAIN;
   } catch (error) {
+    if ((error as AxiosError).response?.status === HttpStatusCode.Unauthorized)
+      throw WRONG_LOGIN_INFO;
     throw error;
   }
 });

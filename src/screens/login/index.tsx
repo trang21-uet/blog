@@ -1,11 +1,14 @@
 import { Button, Logo, Text } from "@/components";
 import { Input } from "@/components/Form";
 import Link from "@/components/Link";
-import { HEADER_HEIGHT } from "@/constant";
-import { REGISTER_PATH } from "@/constant/path";
+import { HEADER_HEIGHT, WRONG_LOGIN_INFO } from "@/constant";
+import { HOME_PATH, REGISTER_PATH } from "@/constant/path";
 import { LoginInfo, useAuth } from "@/store/auth";
 import { Paper, Stack } from "@mui/material";
 import { FormEvent, useState } from "react";
+import { validateLogin } from "./helper";
+import { useRouter } from "next/router";
+import { HttpStatusCode } from "axios";
 
 interface UserLoginError {
   email: string;
@@ -21,15 +24,29 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const router = useRouter();
 
   const { onLogin } = useAuth();
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setError({
+      email: "",
+      password: "",
+    });
     try {
+      const newError = validateLogin(info);
+      if (newError.email || newError.password) {
+        setError(newError);
+        return;
+      }
       await onLogin(info);
+      router.push(HOME_PATH);
     } catch (error) {
-      throw error;
+      setError({
+        email: (error as { message: string }).message,
+        password: (error as { message: string }).message,
+      });
     }
   };
 
@@ -64,6 +81,7 @@ const Login = () => {
             value={info.email}
             onChangeText={(value) => setInfo({ ...info, email: value })}
             error={error.email}
+            autoComplete="text"
           />
           <Input
             name="password"

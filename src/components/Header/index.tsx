@@ -13,11 +13,13 @@ const Header = () => {
   const { isMd } = useBreakpoints();
   const { pathname } = useRouter();
 
-  return (
+  return AUTH_PATHS.includes(pathname) ? (
+    <></>
+  ) : (
     <Paper
       component="header"
       sx={{
-        display: AUTH_PATHS.includes(pathname) ? "none" : "flex",
+        display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
         maxWidth: "100vw",

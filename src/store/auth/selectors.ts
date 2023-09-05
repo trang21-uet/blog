@@ -14,14 +14,14 @@ export const useAuth = () => {
 
   const onLogin = useCallback(
     async (info: LoginInfo) => {
-      await dispatch(login(info));
+      return await dispatch(login(info)).unwrap();
     },
     [dispatch],
   );
 
   const onRegister = useCallback(
     async (info: RegisterInfo) => {
-      await dispatch(register(info));
+      return await dispatch(register(info)).unwrap();
     },
     [dispatch],
   );

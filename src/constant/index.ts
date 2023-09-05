@@ -2,6 +2,7 @@ import { ThemeMode } from "./enum";
 
 export const DEFAULT_THEME_MODE = ThemeMode.LIGHT;
 export const AN_ERROR_TRY_AGAIN = "Có lỗi xảy ra. Vui lòng thử lại";
+export const WRONG_LOGIN_INFO = "Thông tin đăng nhập chưa đúng";
 
 export const DATE_FORMAT_SLASH = "dd/MM/yyyy";
 export const DATE_FORMAT_HYPHEN = "dd-MM-yyyy";

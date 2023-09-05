@@ -6,6 +6,8 @@ import { LOGIN_PATH } from "@/constant/path";
 import { RegisterInfo, useAuth } from "@/store/auth";
 import { Paper, Stack } from "@mui/material";
 import { useState, FormEvent } from "react";
+import { validateRegister } from "./help";
+import { useRouter } from "next/router";
 
 interface UserError {
   email: string;
@@ -25,11 +27,18 @@ const Register = () => {
     confirm: "",
   });
   const { onRegister } = useAuth();
+  const router = useRouter();
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
+      const newError = validateRegister(info);
+      if (newError.email || newError.password) {
+        setError(newError);
+        return;
+      }
       await onRegister(info);
+      router.push(LOGIN_PATH);
     } catch (error) {
       throw error;
     }

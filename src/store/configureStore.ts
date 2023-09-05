@@ -1,16 +1,19 @@
 import { configureStore } from "@reduxjs/toolkit";
 import blogReducer, { BlogState } from "./blog/reducer";
 import AuthReducer, { AuthState } from "./auth/reducer";
+import AppReducer, { AppState } from "./app/reducer";
 
 export interface State {
   blog: BlogState;
   auth: AuthState;
+  app: AppState;
 }
 
 export const store = configureStore({
   reducer: {
     blog: blogReducer,
     auth: AuthReducer,
+    app: AppReducer,
   },
 });
 

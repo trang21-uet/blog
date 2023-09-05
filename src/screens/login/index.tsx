@@ -5,10 +5,11 @@ import { HEADER_HEIGHT, WRONG_LOGIN_INFO } from "@/constant";
 import { HOME_PATH, REGISTER_PATH } from "@/constant/path";
 import { LoginInfo, useAuth } from "@/store/auth";
 import { Paper, Stack } from "@mui/material";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { validateLogin } from "./helper";
 import { useRouter } from "next/router";
 import { HttpStatusCode } from "axios";
+import { useSnackbar } from "@/store/app";
 
 interface UserLoginError {
   email: string;
@@ -25,7 +26,7 @@ const Login = () => {
     password: "",
   });
   const router = useRouter();
-
+  const { onAddSnackbar } = useSnackbar();
   const { onLogin } = useAuth();
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -41,7 +42,8 @@ const Login = () => {
         return;
       }
       await onLogin(info);
-      router.push(HOME_PATH);
+      onAddSnackbar("Đăng nhập thành công");
+      setTimeout(() => router.push(HOME_PATH), 1000);
     } catch (error) {
       setError({
         email: (error as { message: string }).message,

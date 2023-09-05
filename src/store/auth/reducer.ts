@@ -1,6 +1,6 @@
 import { DataStatus } from "@/constant/enum";
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { login } from ".";
+import { login } from "./actions";
 import { AN_ERROR_TRY_AGAIN, TOKEN_KEY } from "@/constant";
 import { User, UserResponse } from "./types";
 

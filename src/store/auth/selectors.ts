@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from "../hooks";
 import { useCallback } from "react";
 import { LoginInfo, RegisterInfo } from "./types";
-import { login, register } from ".";
+import { login, register } from "./actions";
 
 export const useAuth = () => {
   const dispatch = useAppDispatch();

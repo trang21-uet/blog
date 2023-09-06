@@ -3,6 +3,7 @@ import { shallowEqual } from "react-redux";
 import { useCallback, useMemo } from "react";
 import { DataStatus } from "@/constant/enum";
 import { BlogQueries, getBlog, getBlogs } from "./actions";
+import { BaseQueries } from "@/constant/type";
 
 export const useBlogs = () => {
   const dispatch = useAppDispatch();
@@ -15,9 +16,12 @@ export const useBlogs = () => {
   const isIdle = useMemo(() => status === DataStatus.IDLE, [status]);
   const isFetching = useMemo(() => status === DataStatus.LOADING, [status]);
 
-  const onGetBlogs = useCallback(async () => {
-    return await dispatch(getBlogs()).unwrap();
-  }, [dispatch]);
+  const onGetBlogs = useCallback(
+    async (queries?: BaseQueries) => {
+      return await dispatch(getBlogs(queries || {})).unwrap();
+    },
+    [dispatch],
+  );
 
   return {
     items,

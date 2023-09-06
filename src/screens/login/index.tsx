@@ -27,7 +27,13 @@ const Login = () => {
   });
   const router = useRouter();
   const { onAddSnackbar } = useSnackbar();
-  const { onLogin } = useAuth();
+  const { onLogin, user } = useAuth();
+
+  useEffect(() => {
+    if (user) {
+      router.push(HOME_PATH);
+    }
+  }, [router, user]);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();

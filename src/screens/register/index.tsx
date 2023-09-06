@@ -2,10 +2,10 @@ import { Button, Logo, Text } from "@/components";
 import { Input } from "@/components/Form";
 import Link from "@/components/Link";
 import { HEADER_HEIGHT } from "@/constant";
-import { LOGIN_PATH } from "@/constant/path";
+import { HOME_PATH, LOGIN_PATH } from "@/constant/path";
 import { RegisterInfo, useAuth } from "@/store/auth";
 import { Paper, Stack } from "@mui/material";
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
 import { validateRegister } from "./help";
 import { useRouter } from "next/router";
 
@@ -26,8 +26,14 @@ const Register = () => {
     password: "",
     confirm: "",
   });
-  const { onRegister } = useAuth();
+  const { onRegister, user } = useAuth();
   const router = useRouter();
+
+  useEffect(() => {
+    if (user) {
+      router.push(HOME_PATH);
+    }
+  }, [router, user]);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();

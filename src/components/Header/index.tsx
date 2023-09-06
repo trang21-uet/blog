@@ -6,6 +6,7 @@ import { Logo } from "@/components";
 import { HEADER_HEIGHT } from "@/constant";
 import { LOGIN_PATH, REGISTER_PATH } from "@/constant/path";
 import { useRouter } from "next/router";
+import SearchBar from "./SearchBar";
 
 const AUTH_PATHS = [LOGIN_PATH, REGISTER_PATH];
 
@@ -34,6 +35,7 @@ const Header = () => {
       }}
     >
       <Logo />
+      <SearchBar />
       <Nav collapse={isMd} active={pathname} />
     </Paper>
   );

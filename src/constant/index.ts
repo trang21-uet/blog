@@ -15,3 +15,4 @@ export const HEADER_HEIGHT = 70;
 
 export const API_URL = "http://localhost:4000/api";
 export const TOKEN_KEY = "blog-token";
+export const BLOG_THUMBNAIL = "https://picsum.photos/1280/720";

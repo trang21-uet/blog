@@ -1,5 +1,6 @@
-import { Text } from "@/components";
+import { Image, Text } from "@/components";
 import Link from "@/components/Link";
+import { BLOG_THUMBNAIL } from "@/constant";
 import { BLOG_PATH } from "@/constant/path";
 import { Paper, Skeleton, Stack } from "@mui/material";
 import { memo } from "react";
@@ -31,11 +32,14 @@ const BlogCard = (props: BlogCardProps) => {
         },
       }}
     >
-      <Skeleton
-        variant="rectangular"
+      <Image
+        src={BLOG_THUMBNAIL}
         height={200}
         width="100%"
-        animation="wave"
+        style={{
+          objectFit: "cover",
+        }}
+        alt="thumb"
       />
       <Stack spacing={2} m={2} flex={1} height="50%">
         <Text

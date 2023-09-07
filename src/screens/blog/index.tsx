@@ -27,6 +27,7 @@ const Blog = () => {
   const { isMd, isXl } = useBreakpoints();
   const { user } = useAuth();
   const inputRef = useRef<HTMLInputElement | null>(null);
+  const router = useRouter();
 
   const imageHeight = useMemo(() => {
     switch (true) {
@@ -40,11 +41,10 @@ const Blog = () => {
   }, [isMd, isXl]);
 
   useEffect(() => {
-    if (!query || item) {
-      return;
-    }
+    if (!query) return;
+
     onGetBlog(query?.id as string);
-  }, [item, onGetBlog, query]);
+  }, [onGetBlog, query]);
 
   useEffect(() => {
     item && item.comments && setComments(item.comments);
@@ -110,19 +110,23 @@ const Blog = () => {
         </Stack>
       ) : (
         <Text sx={{ textAlign: "center" }}>
-          <Link
-            variant="text"
-            href={LOGIN_PATH}
+          <Text
+            onClick={() => {
+              router.push({
+                pathname: LOGIN_PATH,
+                query: { blogId: router.query?.id as string },
+              });
+            }}
             sx={{
-              color: "text.primary",
-              textDecoration: "underline",
+              cursor: "pointer",
+              display: "inline-block",
               ":hover": {
                 color: "primary.main",
               },
             }}
           >
             Đăng nhập
-          </Link>{" "}
+          </Text>{" "}
           để bình luận
         </Text>
       )}

@@ -19,7 +19,13 @@ const initialState: AuthState = {
 const authSlice = createSlice({
   name: "auth",
   initialState,
-  reducers: {},
+  reducers: {
+    logout: (state) => {
+      state.user = undefined;
+      state.token = undefined;
+      (state.userStatus = DataStatus.IDLE), localStorage.removeItem(TOKEN_KEY);
+    },
+  },
   extraReducers: (builder) =>
     builder
       .addCase(login.pending, (state) => {
@@ -41,5 +47,7 @@ const authSlice = createSlice({
         state.userError = action.error?.message || AN_ERROR_TRY_AGAIN;
       }),
 });
+
+export const { logout } = authSlice.actions;
 
 export default authSlice.reducer;

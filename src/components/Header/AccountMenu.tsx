@@ -5,26 +5,37 @@ import { Menu, MenuItem } from "@mui/material";
 import { memo, useState } from "react";
 import IconButton from "../IconButton";
 import Link, { LinkProps } from "../Link";
+import { Text } from "..";
+import { useSnackbar } from "@/store/app";
+import { useRouter } from "next/router";
 
 type MenuButtonProps = {
   onClick: () => void;
-} & LinkProps;
+  href?: string;
+} & Omit<LinkProps, "href">;
 
 const MenuButton = (props: MenuButtonProps) => {
-  const { onClick, ...rest } = props;
+  const { onClick, href, children, ...rest } = props;
   return (
-    <MenuItem>
-      <Link
-        variant="text"
-        sx={{
-          p: 0,
-          color: "text.primary",
-          bgcolor: "transparent",
-          justifyContent: "start",
-        }}
-        disableRipple
-        {...rest}
-      />
+    <MenuItem onClick={onClick}>
+      {!href ? (
+        <Text>{children}</Text>
+      ) : (
+        <Link
+          variant="text"
+          href={href}
+          sx={{
+            p: 0,
+            color: "text.primary",
+            bgcolor: "transparent",
+            justifyContent: "start",
+          }}
+          disableRipple
+          {...rest}
+        >
+          {children}
+        </Link>
+      )}
     </MenuItem>
   );
 };
@@ -32,7 +43,9 @@ const MenuButton = (props: MenuButtonProps) => {
 const AccountMenu = () => {
   const [anchor, setAnchor] = useState<HTMLElement | null>(null);
   const open = Boolean(anchor);
-  const { user } = useAuth();
+  const { user, onLogout } = useAuth();
+  const { onAddSnackbar } = useSnackbar();
+  const router = useRouter();
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchor(event.currentTarget);
@@ -41,6 +54,19 @@ const AccountMenu = () => {
   const handleClose = () => {
     setAnchor(null);
   };
+
+  const handleLogout = () => {
+    onLogout();
+    onAddSnackbar("Đăng xuất thành công");
+    router.push(LOGIN_PATH);
+  };
+
+  const getMenu = (
+    isAuth: boolean,
+  ): { label: string; onClick?: () => void; href?: string }[] =>
+    isAuth
+      ? [{ label: "Đăng xuất", onClick: handleLogout }]
+      : [{ label: "Đăng nhập", href: LOGIN_PATH }];
 
   return (
     <>
@@ -57,7 +83,11 @@ const AccountMenu = () => {
         }}
       >
         {getMenu(!!user).map((item, index) => (
-          <MenuButton key={index} href={item.href} onClick={handleClose}>
+          <MenuButton
+            key={index}
+            href={item.href}
+            onClick={item.onClick || handleClose}
+          >
             {item.label}
           </MenuButton>
         ))}
@@ -65,13 +95,5 @@ const AccountMenu = () => {
     </>
   );
 };
-
-const getMenu = (isAuth: boolean) =>
-  isAuth
-    ? [
-        { label: "Thông tin tài khoản", href: LOGIN_PATH },
-        { label: "Đăng xuất", href: LOGIN_PATH },
-      ]
-    : [{ label: "Đăng nhập", href: LOGIN_PATH }];
 
 export default memo(AccountMenu);

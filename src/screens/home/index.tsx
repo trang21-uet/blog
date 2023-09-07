@@ -8,10 +8,9 @@ const Page = () => {
   const { items, onGetBlogs } = useBlogs();
 
   useEffect(() => {
+    if (items.length > 0) return;
     onGetBlogs();
-  }, [onGetBlogs]);
-
-  console.log({ items });
+  }, [items, onGetBlogs]);
 
   return (
     <Stack component="main" py={3}>

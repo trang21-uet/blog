@@ -2,6 +2,7 @@ import { useAppDispatch, useAppSelector } from "../hooks";
 import { useCallback } from "react";
 import { LoginInfo, RegisterInfo } from "./types";
 import { login, register } from "./actions";
+import { logout } from ".";
 
 export const useAuth = () => {
   const dispatch = useAppDispatch();
@@ -26,6 +27,10 @@ export const useAuth = () => {
     [dispatch],
   );
 
+  const onLogout = useCallback(() => {
+    dispatch(logout());
+  }, [dispatch]);
+
   return {
     user,
     token,
@@ -33,5 +38,6 @@ export const useAuth = () => {
     error,
     onLogin,
     onRegister,
+    onLogout,
   };
 };

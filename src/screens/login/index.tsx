@@ -2,7 +2,12 @@ import { Button, Logo, Text } from "@/components";
 import { Input } from "@/components/Form";
 import Link from "@/components/Link";
 import { HEADER_HEIGHT, WRONG_LOGIN_INFO } from "@/constant";
-import { HOME_PATH, REGISTER_PATH } from "@/constant/path";
+import {
+  BLOG_PATH,
+  HOME_PATH,
+  LOGIN_PATH,
+  REGISTER_PATH,
+} from "@/constant/path";
 import { LoginInfo, useAuth } from "@/store/auth";
 import { Paper, Stack } from "@mui/material";
 import { FormEvent, useEffect, useState } from "react";
@@ -49,7 +54,18 @@ const Login = () => {
       }
       await onLogin(info);
       onAddSnackbar("Đăng nhập thành công");
-      setTimeout(() => router.push(HOME_PATH), 1000);
+      setTimeout(
+        () =>
+          router.push(
+            router.query?.blogId
+              ? {
+                  pathname: BLOG_PATH,
+                  query: { id: router.query?.blogId as string },
+                }
+              : LOGIN_PATH,
+          ),
+        1000,
+      );
     } catch (error) {
       setError({
         email: (error as { message: string }).message,

@@ -35,7 +35,7 @@ const Header = () => {
       }}
     >
       <Logo />
-      <SearchBar />
+      {/* <SearchBar /> */}
       <Nav collapse={isMd} active={pathname} />
     </Paper>
   );

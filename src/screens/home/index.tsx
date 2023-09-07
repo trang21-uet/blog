@@ -11,6 +11,8 @@ const Page = () => {
     onGetBlogs();
   }, [onGetBlogs]);
 
+  console.log({ items });
+
   return (
     <Stack component="main" py={3}>
       <Text
@@ -32,14 +34,15 @@ const Page = () => {
         gap={3}
         p={1}
       >
-        {items.map((item) => (
-          <BlogCard
-            key={item.id}
-            id={item.id}
-            description={item.description}
-            title={item.title}
-          />
-        ))}
+        {items &&
+          items.map((item) => (
+            <BlogCard
+              key={item.id}
+              id={item.id}
+              description={item.description}
+              title={item.title}
+            />
+          ))}
       </Box>
     </Stack>
   );

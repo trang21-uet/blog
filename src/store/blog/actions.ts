@@ -1,8 +1,8 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import BLOGS from "./data";
 import client, { Endpoint } from "@/api";
 import { BaseQueries } from "@/constant/type";
 import { HttpStatusCode } from "axios";
+import { AN_ERROR_TRY_AGAIN } from "@/constant";
 
 export interface BlogQueries {
   id: string;
@@ -13,25 +13,25 @@ export const getBlogs = createAsyncThunk(
   async (queries?: BaseQueries) => {
     try {
       // TODO
-      // const response = await client.get(Endpoint.BLOG, queries);
-      // if (response.status === HttpStatusCode.Ok) {
-      //   return response.data;
-      // }
-      return BLOGS.filter((item) => item.title.includes(queries?.search || ""));
+      const response = await client.get(Endpoint.BLOGS, queries);
+      if (response.status === HttpStatusCode.Ok) {
+        return response.data;
+      }
+      throw AN_ERROR_TRY_AGAIN;
     } catch (error) {
       throw error;
     }
   },
 );
 
-export const getBlog = createAsyncThunk(
-  "blog/getBlog",
-  async (queries: BlogQueries) => {
-    try {
-      // TODO
-      return BLOGS.find((item) => item.id === queries.id) || BLOGS[0];
-    } catch (error) {
-      throw error;
+export const getBlog = createAsyncThunk("blog/getBlog", async (id: string) => {
+  try {
+    const response = await client.get(`${Endpoint.BLOGS}/${id}`);
+    if (response.status === HttpStatusCode.Ok) {
+      return response.data;
     }
-  },
-);
+    throw AN_ERROR_TRY_AGAIN;
+  } catch (error) {
+    throw error;
+  }
+});

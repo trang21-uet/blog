@@ -8,6 +8,7 @@ import { Paper, Stack } from "@mui/material";
 import { useState, FormEvent, useEffect } from "react";
 import { validateRegister } from "./help";
 import { useRouter } from "next/router";
+import { useSnackbar } from "@/store/app";
 
 interface UserError {
   email: string;
@@ -28,6 +29,7 @@ const Register = () => {
   });
   const { onRegister, user } = useAuth();
   const router = useRouter();
+  const { onAddSnackbar } = useSnackbar();
 
   useEffect(() => {
     if (user) {
@@ -44,7 +46,8 @@ const Register = () => {
         return;
       }
       await onRegister(info);
-      router.push(LOGIN_PATH);
+      onAddSnackbar("Đăng ký thành công");
+      setTimeout(() => router.push(LOGIN_PATH), 2000);
     } catch (error) {
       throw error;
     }

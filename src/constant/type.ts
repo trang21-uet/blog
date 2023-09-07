@@ -14,3 +14,11 @@ export interface NavItem {
   children?: NavItem[];
   icon?: React.ReactNode;
 }
+
+export interface ItemList {
+  items: any[];
+  pageIndex: number;
+  pageSize: number;
+  totalItems: number;
+  totalPages: number;
+}

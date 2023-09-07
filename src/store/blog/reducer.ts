@@ -1,5 +1,5 @@
 import { DataStatus } from "@/constant/enum";
-import { Entity } from "@/constant/type";
+import { Entity, ItemList } from "@/constant/type";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { getBlog, getBlogs } from "./actions";
 import { AN_ERROR_TRY_AGAIN } from "@/constant/index";
@@ -7,9 +7,13 @@ import { AN_ERROR_TRY_AGAIN } from "@/constant/index";
 export interface Blog extends Entity {
   title: string;
   description: string;
-  paragraphs: {
+  contents: {
     title: string;
     content: string;
+  }[];
+  comments?: {
+    message: string;
+    user: string;
   }[];
   author: string;
 }
@@ -38,8 +42,9 @@ const blogSlice = createSlice({
       .addCase(getBlogs.pending, (state) => {
         state.blogsStatus = DataStatus.LOADING;
       })
-      .addCase(getBlogs.fulfilled, (state, action: PayloadAction<Blog[]>) => {
-        state.blogs = action.payload;
+      .addCase(getBlogs.fulfilled, (state, action: PayloadAction<ItemList>) => {
+        const { items } = action.payload;
+        state.blogs = items as Blog[];
         state.blogsStatus = DataStatus.SUCCESS;
         state.blogsError = undefined;
       })

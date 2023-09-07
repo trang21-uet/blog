@@ -1,7 +1,7 @@
 const Endpoint = {
   LOGIN: "/login",
   REGISTER: "/register",
-  BLOG: "/posts",
+  BLOGS: "/post",
 };
 
 export default Endpoint;

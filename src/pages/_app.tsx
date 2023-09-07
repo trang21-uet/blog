@@ -5,6 +5,7 @@ import { AppProvider, ThemeProvider } from "@/contexts";
 import { Container } from "@mui/material";
 import type { AppProps } from "next/app";
 import "../../public/styles/global.scss";
+import Snackbar from "@/components/Snackbar";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -23,6 +24,8 @@ export default function App({ Component, pageProps }: AppProps) {
           }}
         >
           <Component {...pageProps} />
+
+          <Snackbar />
         </Container>
       </ThemeProvider>
     </AppProvider>

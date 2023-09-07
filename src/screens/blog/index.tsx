@@ -1,22 +1,32 @@
-import { InfoBlock } from "@/components";
+import { Button, InfoBlock } from "@/components";
+import Comment from "@/components/Comment";
+import { Input } from "@/components/Form";
 import Image from "@/components/Image";
 import Link from "@/components/Link";
 import Loading from "@/components/Loading";
 import Text from "@/components/Text";
+import { LOGIN_PATH } from "@/constant/path";
 import { useBreakpoints } from "@/hooks";
+import { useAuth } from "@/store/auth";
 import { useBlog } from "@/store/blog";
 import { formatDate } from "@/utils";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import PersonIcon from "@mui/icons-material/Person";
-import { Stack } from "@mui/material";
+import { Divider, Stack } from "@mui/material";
 import { useRouter } from "next/router";
-import { useEffect, useMemo } from "react";
+import { FormEvent, useEffect, useMemo, useState, useRef } from "react";
 import TableOfContents from "./TableOfContents";
 
 const Blog = () => {
   const { item, isFetching, onGetBlog } = useBlog();
+  const [comments, setComments] = useState<{ message: string; user: string }[]>(
+    [],
+  );
+  const [comment, setComment] = useState("");
   const { query } = useRouter();
   const { isMd, isXl } = useBreakpoints();
+  const { user } = useAuth();
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   const imageHeight = useMemo(() => {
     switch (true) {
@@ -33,8 +43,22 @@ const Blog = () => {
     if (!query || item) {
       return;
     }
-    onGetBlog({ id: query?.id as string });
+    onGetBlog(query?.id as string);
   }, [item, onGetBlog, query]);
+
+  useEffect(() => {
+    item && item.comments && setComments(item.comments);
+  }, [item]);
+
+  const addComment = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (comment === "") return;
+    setComments((prev) => [
+      ...prev,
+      { message: comment, user: user?.email || "Unknown" },
+    ]);
+    setComment("");
+  };
 
   return isFetching ? (
     <Loading />
@@ -55,14 +79,55 @@ const Blog = () => {
           textProps={{ color: "text.disabled" }}
         />
       </Stack>
-      <TableOfContents items={item?.paragraphs.map((para) => para.title)} />
+      <TableOfContents items={item?.contents.map((para) => para.title)} />
       <Image
         height={imageHeight}
         src="https://picsum.photos/1280/720"
         alt="blog"
       />
-      {item?.paragraphs.map((item, index) => (
-        <Paragraph key={index} {...item} />
+      {item?.contents.map((item, index) => <Paragraph key={index} {...item} />)}
+      <Divider sx={{ width: "100%", height: "2px", bgcolor: "white" }} />
+      <Text variant="h5">Bình luận</Text>
+      {user ? (
+        <Stack
+          component="form"
+          onSubmit={addComment}
+          direction="row"
+          spacing={3}
+          alignItems="center"
+        >
+          <Input
+            value={comment}
+            ref={inputRef}
+            onChangeText={(text) => setComment(text)}
+            label="Nhập bình luận"
+            name="comment"
+            fullWidth
+          />
+          <Button type="submit" sx={{ whiteSpace: "nowrap", py: 1.5, px: 3 }}>
+            Bình luận
+          </Button>
+        </Stack>
+      ) : (
+        <Text sx={{ textAlign: "center" }}>
+          <Link
+            variant="text"
+            href={LOGIN_PATH}
+            sx={{
+              color: "text.primary",
+              textDecoration: "underline",
+              ":hover": {
+                color: "primary.main",
+              },
+            }}
+          >
+            Đăng nhập
+          </Link>{" "}
+          để bình luận
+        </Text>
+      )}
+      {comments.map((item, index) => (
+        <Comment key={index} user={item.user} comment={item.message} />
       ))}
     </Stack>
   );

@@ -1,9 +1,23 @@
-import { API_URL } from "@/constant";
+import { API_URL, TOKEN_KEY } from "@/constant";
 import axios from "axios";
 import Endpoint from "./endpoint";
 
 axios.defaults.baseURL = API_URL;
 axios.defaults.headers.post["Content-Type"] = "application/json";
+
+axios.interceptors.request.use(
+  (config) => {
+    const token = localStorage.getItem(TOKEN_KEY);
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => {
+    // Do something with request error
+    return Promise.reject(error);
+  },
+);
 
 const apiClient = {
   get: async (endpoint: string, params = {}) => {

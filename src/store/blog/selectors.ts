@@ -2,7 +2,7 @@ import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { shallowEqual } from "react-redux";
 import { useCallback, useMemo } from "react";
 import { DataStatus } from "@/constant/enum";
-import { getBlog, getBlogs } from "./actions";
+import { addComment, getBlog, getBlogs } from "./actions";
 import { BaseQueries } from "@/constant/type";
 
 export const useBlogs = () => {
@@ -51,6 +51,13 @@ export const useBlog = () => {
     [dispatch],
   );
 
+  const onComment = useCallback(
+    async (data: { comment: string; userId: number; postId: number }) => {
+      return await dispatch(addComment(data)).unwrap();
+    },
+    [dispatch],
+  );
+
   return {
     item,
     status,
@@ -58,5 +65,6 @@ export const useBlog = () => {
     isIdle,
     isFetching,
     onGetBlog,
+    onComment,
   };
 };

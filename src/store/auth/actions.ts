@@ -1,7 +1,7 @@
 import apiClient, { Endpoint } from "@/api";
 import { AN_ERROR_TRY_AGAIN, WRONG_LOGIN_INFO } from "@/constant";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { Axios, AxiosError, HttpStatusCode } from "axios";
+import { AxiosError, HttpStatusCode } from "axios";
 import { LoginInfo, RegisterInfo } from "./types";
 
 export const login = createAsyncThunk("auth/login", async (info: LoginInfo) => {

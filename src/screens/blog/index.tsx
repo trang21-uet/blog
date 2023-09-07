@@ -18,10 +18,7 @@ import { FormEvent, useEffect, useMemo, useState, useRef } from "react";
 import TableOfContents from "./TableOfContents";
 
 const Blog = () => {
-  const { item, isFetching, onGetBlog } = useBlog();
-  const [comments, setComments] = useState<{ message: string; user: string }[]>(
-    [],
-  );
+  const { item, isFetching, onGetBlog, onComment } = useBlog();
   const [comment, setComment] = useState("");
   const { query } = useRouter();
   const { isMd, isXl } = useBreakpoints();
@@ -46,18 +43,15 @@ const Blog = () => {
     onGetBlog(query?.id as string);
   }, [onGetBlog, query]);
 
-  useEffect(() => {
-    item && item.comments && setComments(item.comments);
-  }, [item]);
-
   const addComment = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (comment === "") return;
-    setComments((prev) => [
-      ...prev,
-      { message: comment, user: user?.email || "Unknown" },
-    ]);
+    onComment({
+      comment,
+      postId: query?.id as unknown as number,
+      userId: user?.id as number,
+    });
     setComment("");
+    inputRef.current && (inputRef.current.value = "");
   };
 
   return isFetching ? (
@@ -130,9 +124,10 @@ const Blog = () => {
           để bình luận
         </Text>
       )}
-      {comments.map((item, index) => (
-        <Comment key={index} user={item.user} comment={item.message} />
-      ))}
+      {item.comments &&
+        item.comments.map((item, index) => (
+          <Comment key={index} user={item.username} comment={item.comment} />
+        ))}
     </Stack>
   );
 };

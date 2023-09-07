@@ -1,7 +1,7 @@
 import { DataStatus } from "@/constant/enum";
 import { Entity, ItemList } from "@/constant/type";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { getBlog, getBlogs } from "./actions";
+import { addComment, getBlog, getBlogs } from "./actions";
 import { AN_ERROR_TRY_AGAIN } from "@/constant/index";
 
 export interface Blog extends Entity {
@@ -12,8 +12,8 @@ export interface Blog extends Entity {
     content: string;
   }[];
   comments?: {
-    message: string;
-    user: string;
+    comment: string;
+    username: string;
   }[];
   author: string;
 }
@@ -63,7 +63,21 @@ const blogSlice = createSlice({
       .addCase(getBlog.rejected, (state, action) => {
         state.blogStatus = DataStatus.FAILED;
         state.blogError = action.error?.message ?? AN_ERROR_TRY_AGAIN;
-      });
+      })
+      .addCase(
+        addComment.fulfilled,
+        (
+          state,
+          action: PayloadAction<{ comment: string; username: string }>,
+        ) => {
+          if (state.blog) {
+            if (!state.blog.comments) {
+              state.blog.comments = [];
+            }
+            state.blog.comments.push(action.payload);
+          }
+        },
+      );
   },
 });
 

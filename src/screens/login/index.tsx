@@ -58,10 +58,7 @@ const Login = () => {
         () =>
           router.push(
             router.query?.blogId
-              ? {
-                  pathname: BLOG_PATH,
-                  query: { id: router.query?.blogId as string },
-                }
+              ? `${BLOG_PATH}/${router.query?.blogId}`
               : LOGIN_PATH,
           ),
         1000,

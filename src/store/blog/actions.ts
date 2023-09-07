@@ -8,6 +8,12 @@ export interface BlogQueries {
   id: string;
 }
 
+export interface CommentQueries {
+  comment: string;
+  userId: number;
+  postId: number;
+}
+
 export const getBlogs = createAsyncThunk(
   "blog/getBlogs",
   async (queries?: BaseQueries) => {
@@ -35,3 +41,22 @@ export const getBlog = createAsyncThunk("blog/getBlog", async (id: string) => {
     throw error;
   }
 });
+
+export const addComment = createAsyncThunk(
+  "blog/addComment",
+  async (queries: CommentQueries) => {
+    try {
+      const { postId, comment, userId } = queries;
+      const response = await client.post(`${Endpoint.COMMENT}/${postId}`, {
+        comment,
+        userId,
+      });
+      if (response.status === HttpStatusCode.Created) {
+        return response.data;
+      }
+      throw AN_ERROR_TRY_AGAIN;
+    } catch (error) {
+      throw error;
+    }
+  },
+);
